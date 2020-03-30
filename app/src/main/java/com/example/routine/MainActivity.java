@@ -3,7 +3,6 @@ package com.example.routine;
 import android.os.Bundle;
 
 import com.example.routine.Dialog.AddReminderDialog;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,7 +12,13 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.github.clans.fab.FloatingActionMenu;
+import com.github.clans.fab.FloatingActionButton;
+
 public class MainActivity extends AppCompatActivity {
+
+    FloatingActionMenu floatingActionMenu;
+    FloatingActionButton floatingActionButton1, floatingActionButton2, floatingActionButton3, floatingActionButton4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,13 +27,37 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        floatingActionMenu = (FloatingActionMenu) findViewById(R.id.famenu);
+        floatingActionButton1 = (FloatingActionButton) findViewById(R.id.menu_item1);
+        floatingActionButton2 = (FloatingActionButton) findViewById(R.id.menu_item2);
+        floatingActionButton3 = (FloatingActionButton) findViewById(R.id.menu_item3);
+        floatingActionButton4 = (FloatingActionButton) findViewById(R.id.menu_item4);
+
+        floatingActionButton1.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View view) {
-                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();*/
+            public void onClick(View v) {
                 openAddReminderDialog();
+            }
+        });
+
+        floatingActionButton2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        floatingActionButton3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        floatingActionButton4.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
             }
         });
     }
