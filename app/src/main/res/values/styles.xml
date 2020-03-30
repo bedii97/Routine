@@ -1,12 +1,62 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <!-- Light Theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!--Unimportant-->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <!--Ground Colors (Light)-->
+        <item name="android:statusBarColor">@color/statusBarColorLight</item>
+        <item name="activityBackgroundColor">@color/backgroundColorLight</item>
+        <item name="toolbarColor">@color/toolbarColorLight</item>
+        <item name="cardViewColor">@color/cardViewColorLight</item>
+
+        <!--Text Colors (Light)-->
+        <item name="primaryTextColor">@color/primaryTextColorLight</item>
+        <item name="secondaryTextColor">@color/secondaryTextColorLight</item>
+        <item name="thirdTextColor">@color/thirdTextColorLight</item>
+        <item name="labelsTextColor">@color/labelTextColorLight</item>
+
+        <!--FAB Labels Colors (Light)-->
+        <item name="labelsColorNormal">@color/labelsColorNormalLight</item>
+        <item name="labelsColorPressed">@color/labelsColorPressedLight</item>
+        <item name="labelsColorRipple">@color/labelsColorRippleLight</item>
+
     </style>
+
+
+
+    <!-- Dark Theme -->
+    <style name="AppThemeDark" parent="Theme.AppCompat.DayNight.NoActionBar">
+
+        <!--Unimportant-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--Ground Colors (Dark)-->
+        <item name="android:statusBarColor">@color/statusBarColorDark</item>
+        <item name="activityBackgroundColor">@color/backgroundColorDark</item>
+        <item name="toolbarColor">@color/toolbarColorDark</item>
+        <item name="cardViewColor">@color/cardViewColorDark</item>
+
+        <!--Text Colors (Dark)-->
+        <item name="primaryTextColor">@color/primaryTextColorDark</item>
+        <item name="secondaryTextColor">@color/secondaryTextColorDark</item>
+        <item name="thirdTextColor">@color/thirdTextColorDark</item>
+        <item name="labelsTextColor">@color/labelTextColorDark</item>
+
+        <!--FAB Labels Colors (Dark)-->
+        <item name="labelsColorNormal">@color/labelsColorNormalDark</item>
+        <item name="labelsColorPressed">@color/labelsColorPressedDark</item>
+        <item name="labelsColorRipple">@color/labelsColorRippleDark</item>
+
+    </style>
+
+
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>

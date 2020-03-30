@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="activityBackgroundColor" format="reference"/>
+    <attr name="toolbarColor" format="reference"/>
+    <attr name="cardViewColor" format="reference"/>
+    
+    <attr name="primaryTextColor" format="reference"/>
+    <attr name="secondaryTextColor" format="reference"/>
+    <attr name="thirdTextColor" format="reference"/>
+
+    <attr name="labelsTextColor" format="reference"/>
+
+    <attr name="labelsColorNormal" format="reference"/>
+    <attr name="labelsColorPressed" format="reference"/>
+    <attr name="labelsColorRipple" format="reference"/>
+
+</resources>

@@ -1,6 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFBB00</color>
-    <color name="colorPrimaryDark">#D59C00</color>
+
+    <!--LIGHT MODE COLORS-->
+
+    <!--Unimportant-->
+    <color name="colorPrimary">#FF9800</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <!--Main Colors-->
+    <color name="mainColor">#FF9800</color>
+    <color name="mainColorDarker">#FB8C00</color>
+    <color name="mainColorLighter">#FFB74D</color>
+
+    <!--Ground Colors (Light)-->
+    <color name="backgroundColorLight">#EEEEEE</color>
+    <color name="toolbarColorLight">#FF9800</color>
+    <color name="statusBarColorLight">#FB8C00</color>
+    <color name="cardViewColorLight">#FFFFFF</color>
+
+    <color name="floatingActionButtonsShadowColor">#33000000</color>
+
+    <!--Text Colors (Light)-->
+    <color name="primaryTextColorLight">#D9000000</color>
+    <color name="secondaryTextColorLight">#99000000</color>
+    <color name="thirdTextColorLight">#66000000</color>
+    <color name="labelTextColorLight">#D9FFFFFF</color>
+
+    <!--FAB Labels Colors (Light)-->
+    <color name="labelsColorNormalLight">#333333</color>
+    <color name="labelsColorPressedLight">#444444</color>
+    <color name="labelsColorRippleLight">#66FFFFFF</color>
+
+
+
+    <!--DARK MODE COLORS-->
+
+    <!--Ground Colors (Dark)-->
+    <color name="backgroundColorDark">#303030</color>
+    <color name="toolbarColorDark">#212121</color>
+    <color name="statusBarColorDark">#000000</color>
+    <color name="cardViewColorDark">#424242</color>
+
+    <!--Text Colors (Dark)-->
+    <color name="primaryTextColorDark">#D9FFFFFF</color>
+    <color name="secondaryTextColorDark">#99FFFFFF</color>
+    <color name="thirdTextColorDark">#66FFFFFF</color>
+    <color name="labelTextColorDark">#D9000000</color>
+
+    <!--FAB Labels Colors (Dark)-->
+    <color name="labelsColorNormalDark">#DCDCDC</color>
+    <color name="labelsColorPressedDark">#C9C9C9</color>
+    <color name="labelsColorRippleDark">#99FFFFFF</color>
+
+
 </resources>

@@ -3,7 +3,6 @@ package com.example.routine;
 import android.os.Bundle;
 
 import com.example.routine.Dialog.AddReminderDialog;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -27,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        floatingActionMenu = (FloatingActionMenu) findViewById(R.id.famenu);
+        floatingActionMenu = (FloatingActionMenu) findViewById(R.id.famMenu);
         floatingActionButton1 = (FloatingActionButton) findViewById(R.id.menu_item1);
         floatingActionButton2 = (FloatingActionButton) findViewById(R.id.menu_item2);
         floatingActionButton3 = (FloatingActionButton) findViewById(R.id.menu_item3);
