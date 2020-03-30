@@ -27,6 +27,10 @@
     <color name="thirdTextColorLight">#66000000</color>
     <color name="labelTextColorLight">#D9FFFFFF</color>
 
+    <color name="floatingActionButtonNormalColorLight">#FF9800</color>
+    <color name="floatingActionButtonPressedColorLight">#FB8C00</color>
+    <color name="floatingActionButtonRippleColorLight">#FFB74D</color>
+
     <!--FAB Labels Colors (Light)-->
     <color name="labelsColorNormalLight">#333333</color>
     <color name="labelsColorPressedLight">#444444</color>
@@ -47,6 +51,10 @@
     <color name="secondaryTextColorDark">#99FFFFFF</color>
     <color name="thirdTextColorDark">#66FFFFFF</color>
     <color name="labelTextColorDark">#D9000000</color>
+
+    <color name="floatingActionButtonNormalColorDark">#FFB74D</color>
+    <color name="floatingActionButtonPressedColorDark">#FF9800</color>
+    <color name="floatingActionButtonRippleColorDark">#FFCC80</color>
 
     <!--FAB Labels Colors (Dark)-->
     <color name="labelsColorNormalDark">#DCDCDC</color>

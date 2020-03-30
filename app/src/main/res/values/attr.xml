@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    
+    <attr name="coloredTexts" format="reference"/>
+
+    <attr name="floatingActionMenuNormalColor" format="reference"/>
+    <attr name="floatingActionMenuPressedColor" format="reference"/>
+    <attr name="floatingActionMenuRippleColor" format="reference"/>
 
     <attr name="activityBackgroundColor" format="reference"/>
     <attr name="toolbarColor" format="reference"/>

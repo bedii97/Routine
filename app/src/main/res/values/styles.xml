@@ -20,6 +20,11 @@
         <item name="thirdTextColor">@color/thirdTextColorLight</item>
         <item name="labelsTextColor">@color/labelTextColorLight</item>
 
+        <!--Floating Action Button Colors (Light)-->
+        <item name="floatingActionMenuNormalColor">@color/floatingActionButtonNormalColorLight</item>
+        <item name="floatingActionMenuPressedColor">@color/floatingActionButtonPressedColorLight</item>
+        <item name="floatingActionMenuRippleColor">@color/floatingActionButtonRippleColorLight</item>
+
         <!--FAB Labels Colors (Light)-->
         <item name="labelsColorNormal">@color/labelsColorNormalLight</item>
         <item name="labelsColorPressed">@color/labelsColorPressedLight</item>
@@ -48,6 +53,11 @@
         <item name="secondaryTextColor">@color/secondaryTextColorDark</item>
         <item name="thirdTextColor">@color/thirdTextColorDark</item>
         <item name="labelsTextColor">@color/labelTextColorDark</item>
+
+        <!--Floating Action Button Colors (Dark)-->
+        <item name="floatingActionMenuNormalColor">@color/floatingActionButtonNormalColorDark</item>
+        <item name="floatingActionMenuPressedColor">@color/floatingActionButtonPressedColorDark</item>
+        <item name="floatingActionMenuRippleColor">@color/floatingActionButtonRippleColorDark</item>
 
         <!--FAB Labels Colors (Dark)-->
         <item name="labelsColorNormal">@color/labelsColorNormalDark</item>
