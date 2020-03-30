@@ -15,10 +15,10 @@ import androidx.fragment.app.DialogFragment;
 
 import com.example.routine.R;
 
-public class AddReminderDialog extends DialogFragment {
+public class AddWeeklyReminder extends DialogFragment {
 
     private EditText editText1, editText2;
-    private AddReminderDialogListener listener;
+    private AddWeeklyReminderListener listener;
 
     @NonNull
     @Override
@@ -39,7 +39,7 @@ public class AddReminderDialog extends DialogFragment {
                     public void onClick(DialogInterface dialog, int which) {
                         String et1 = editText1.getText().toString();
                         String et2 = editText2.getText().toString();
-                        listener.applyTexts(et1, et2);
+                        listener.getWeeklyInfo(et1, et2);
                     }
                 });
 
@@ -53,13 +53,13 @@ public class AddReminderDialog extends DialogFragment {
         super.onAttach(context);
 
         try{
-            listener = (AddReminderDialogListener) context;
+            listener = (AddWeeklyReminderListener) context;
         }catch (ClassCastException e){
             throw new ClassCastException(context.toString() + " must implement AddReminderDialogListener");
         }
     }
 
-    public interface AddReminderDialogListener{
-        void applyTexts(String et1, String et2);
+    public interface AddWeeklyReminderListener{
+        void getWeeklyInfo(String et1, String et2);
     }
 }
