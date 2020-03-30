@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/add_reminder_common_variables_event_name_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="olay adı"
+        android:importantForAutofill="no"
+        android:inputType="textLongMessage"
+        android:minHeight="48dp"
+        android:textColor="?attr/primaryTextColor"
+        android:textColorHint="?attr/thirdTextColor"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/add_reminder_common_variables_notification_message_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Bildirim mesajı"
+        android:importantForAutofill="no"
+        android:inputType="textLongMessage"
+        android:minHeight="48dp"
+        android:textColor="?attr/primaryTextColor"
+        android:textColorHint="?attr/thirdTextColor"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_reminder_common_variables_event_name_et" />
+
+    <EditText
+        android:id="@+id/add_reminder_common_variables_starting_calendar_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="First Date Calendar"
+        android:importantForAutofill="no"
+        android:inputType="textLongMessage"
+        android:minHeight="48dp"
+        android:textColor="?attr/primaryTextColor"
+        android:textColorHint="?attr/thirdTextColor"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_reminder_common_variables_notification_message_et" />
+
+    <EditText
+        android:id="@+id/add_reminder_common_variables_finishing_calendar_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Last Date Calendar"
+        android:importantForAutofill="no"
+        android:inputType="textLongMessage"
+        android:minHeight="48dp"
+        android:textColor="?attr/primaryTextColor"
+        android:textColorHint="?attr/thirdTextColor"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_reminder_common_variables_starting_calendar_et" />
+
+    <EditText
+        android:id="@+id/add_reminder_common_variables_clock_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Saat"
+        android:importantForAutofill="no"
+        android:inputType="textLongMessage"
+        android:minHeight="48dp"
+        android:textColor="?attr/primaryTextColor"
+        android:textColorHint="?attr/thirdTextColor"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_reminder_common_variables_finishing_calendar_et" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

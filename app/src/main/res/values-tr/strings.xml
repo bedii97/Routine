@@ -8,4 +8,14 @@
     <string name="menu_item_monthly">Aylık</string>
     <string name="menu_item_yearly">Yıllık</string>
     <string name="menu_label">Tekrar Tipini Seçin</string>
+
+    <string name="add_reminder_every_word">Her</string>
+    <string name="add_daily_reminder_day">Günde Bir</string>
+
+    <string name="add_weekly_reminder_week">Haftada Bir</string>
+
+    <string name="add_monthly_reminder_month">Ayda Bir</string>
+
+    <string name="add_yearly_reminder_Day">Yılda Bir</string>
+
 </resources>

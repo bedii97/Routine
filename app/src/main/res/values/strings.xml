@@ -8,4 +8,13 @@
     <string name="menu_item_yearly">Yearly</string>
     <string name="menu_label">Choose a Repeat Type</string>
 
+    <string name="add_reminder_every_word">Every</string>
+    <string name="add_daily_reminder_day">Days</string>
+
+    <string name="add_weekly_reminder_week">Weeks</string>
+
+    <string name="add_monthly_reminder_month">Months</string>
+
+    <string name="add_yearly_reminder_Day">Years</string>
+
 </resources>

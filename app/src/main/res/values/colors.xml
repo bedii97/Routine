@@ -3,11 +3,6 @@
 
     <!--LIGHT MODE COLORS-->
 
-    <!--Unimportant-->
-    <color name="colorPrimary">#FF9800</color>
-    <color name="colorPrimaryDark">#FFFFFF</color>
-    <color name="colorAccent">#03DAC5</color>
-
     <!--Main Colors-->
     <color name="mainColor">#FF9800</color>
     <color name="mainColorDarker">#FB8C00</color>
