@@ -10,11 +10,12 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.github.clans.fab.FloatingActionMenu;
 import com.github.clans.fab.FloatingActionButton;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AddReminderDialog.AddReminderDialogListener {
 
     FloatingActionMenu floatingActionMenu;
     FloatingActionButton floatingActionButton1, floatingActionButton2, floatingActionButton3, floatingActionButton4;
@@ -86,5 +87,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void applyTexts(String et1, String et2) {
+        Toast.makeText(this, "ET1: " + et1 + " ET2: " + et2, Toast.LENGTH_SHORT).show();
     }
 }
