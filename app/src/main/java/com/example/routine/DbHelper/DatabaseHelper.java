@@ -35,14 +35,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    /*public long insertDaily(String eventName, String notifMessage, String currentDate, String endDate, String currentTime, String frequency){
+    public long insertDaily(String eventName, String notifMessage, String startedDate, String endedDate, String time, String frequency){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(DBConstants.T_1_C_EVENT_NAME, eventName);
-        values.put(DBConstants.T_1_C_EVENT_NAME, eventName);
-        values.put(DBConstants.T_1_C_EVENT_NAME, eventName);
-        values.put(DBConstants.T_1_C_EVENT_NAME, eventName);
-        values.put(DBConstants.T_1_C_EVENT_NAME, eventName);
-        values.put(DBConstants.T_1_C_EVENT_NAME, eventName);
-    }*/
+        values.put(DBConstants.T_1_C_NOTIFICATION_MESSAGE, notifMessage);
+        values.put(DBConstants.T_1_C_STARTED_DATE, startedDate);
+        values.put(DBConstants.T_1_C_ENDED_DATE, endedDate);
+        values.put(DBConstants.T_1_C_TIME, time);
+        long id = db.insert(DBConstants.T_1_NAME, null, values);
+        ContentValues values2 = new ContentValues();
+        values2.put(DBConstants.T__2_C_ID, id);
+        values2.put(DBConstants.T__2_C_FREQUENCY, frequency);
+        db.insert(DBConstants.T_2_NAME, null, values2);
+        db.close();
+        return id;
+    }
 }

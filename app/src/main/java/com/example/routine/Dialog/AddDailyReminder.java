@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -15,11 +16,16 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
+import com.example.routine.DbHelper.DBConstants;
+import com.example.routine.DbHelper.DatabaseHelper;
 import com.example.routine.R;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class AddDailyReminder extends DialogFragment implements TimePickerDialog.OnTimeSetListener, DatePickerDialog.OnDateSetListener {
 
@@ -31,6 +37,7 @@ public class AddDailyReminder extends DialogFragment implements TimePickerDialog
 
     private Button saveButton, cancelButton;
     private EditText eventNameEditText, notificationMessageEditText, currentDateEditText, endDateEditText, currentTimeEditText, frequencyEditText;
+    private String selectedEventName, selectedNotificationMessage, selectedStartedDate, selectedEndedDate, selectedTime, selectedFrequency;
     private AddDailyReminderListener listener;
 
     @NonNull
@@ -46,15 +53,7 @@ public class AddDailyReminder extends DialogFragment implements TimePickerDialog
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String eventName = eventNameEditText.getText().toString();
-                String notifMessage = notificationMessageEditText.getText().toString();
-                String currentDate = currentDateEditText.getText().toString();
-                String endDate = endDateEditText.getText().toString();
-                String currentTime = currentTimeEditText.getText().toString();
-                String frequency = frequencyEditText.getText().toString();
-
-                listener.getDailyInfo(eventName, notifMessage, currentDate, endDate, currentTime, frequency);
-                getDialog().dismiss();
+                saveButton();
             }
         });
         cancelButton.setOnClickListener(new View.OnClickListener() {
@@ -88,6 +87,20 @@ public class AddDailyReminder extends DialogFragment implements TimePickerDialog
         return builder.create();
     }
 
+    private void saveButton() {
+        selectedEventName = eventNameEditText.getText().toString();
+        selectedNotificationMessage = notificationMessageEditText.getText().toString();
+        selectedFrequency = frequencyEditText.getText().toString();
+
+        String body = "EventName: " + selectedEventName + " NotificationMessage: " + selectedNotificationMessage + " CurrentDate: " + selectedStartedDate + " EndDate: " + selectedEndedDate + " CurrentTime: " + selectedTime + " Frequency: " + selectedFrequency;
+        Log.d("bediiko", "getDailyInfo: " + body);
+
+        DatabaseHelper databaseHelper = new DatabaseHelper(getContext());
+        Long id = databaseHelper.insertDaily(selectedEventName, selectedNotificationMessage, selectedStartedDate, selectedEndedDate, selectedTime, selectedFrequency);
+        Toast.makeText(getContext(), "ID: " + id, Toast.LENGTH_SHORT).show();
+        getDialog().dismiss();
+    }
+
     private void showDatePicker(String tag) {
         Calendar now = Calendar.getInstance();
         DatePickerDialog dpd = DatePickerDialog.newInstance(
@@ -109,8 +122,15 @@ public class AddDailyReminder extends DialogFragment implements TimePickerDialog
         int dayOfMonth = now.get(Calendar.DAY_OF_MONTH);
         int monthOfYear = now.get(Calendar.MONTH);
         int year = now.get(Calendar.YEAR);
-        String time = TIME_PREFIX + hour + ":" + minute;
+        String stringMinute = addZero(minute);
+        String time = TIME_PREFIX + hour + ":" + stringMinute;
+        String tempTime = hour + ":" + stringMinute; //İstediğimiz patternde olması için geçici bir time oluşturuyoruz
+        setSelectedTime(tempTime); //Global değişkene set ediyoruz
         String date = DATE_PREFIX+dayOfMonth+"/"+(monthOfYear+1)+"/"+year;
+        String stringMonth = addZero(monthOfYear+1);
+        String stringDay = addZero(dayOfMonth);
+        String tempDate = stringDay+"/"+stringMonth+"/"+year; //İstediğimiz patternde olması için geçici bir startedDate oluşturuyoruz
+        setSelectedStartedDate(tempDate); //Global değişkene set ediyoruz
         currentTimeEditText.setText(time);
         currentDateEditText.setText(date);
     }
@@ -157,7 +177,10 @@ public class AddDailyReminder extends DialogFragment implements TimePickerDialog
 
     @Override
     public void onTimeSet(TimePickerDialog view, int hourOfDay, int minute, int second) {
-        currentTimeEditText.setText(TIME_PREFIX + hourOfDay + ":" + minute);
+        String stringMinute = addZero(minute);
+        currentTimeEditText.setText(TIME_PREFIX + hourOfDay + ":" + stringMinute);
+        String tempTime = hourOfDay + ":" + stringMinute;
+        setSelectedTime(tempTime);
         //Toast.makeText(getContext(), "Saat: " + hourOfDay + "Minute: " + minute + "Second: " + second, Toast.LENGTH_SHORT).show();
     }
 
@@ -167,13 +190,68 @@ public class AddDailyReminder extends DialogFragment implements TimePickerDialog
         String tag = view.getTag();
         if(tag.equals(CURRENT_DATE_TAG)){
             currentDateEditText.setText(date);
+            String stringMonth = addZero(monthOfYear+1);
+            String stringDay = addZero(dayOfMonth);
+            String tempDate = stringDay+"/"+stringMonth+"/"+year; //İstediğimiz patternde olması için geçici bir startedDate oluşturuyoruz
+            setSelectedStartedDate(tempDate); //Global değişkene set ediyoruz
         }else{
             endDateEditText.setText(date);
+            String stringMonth = addZero(monthOfYear+1);
+            String stringDay = addZero(dayOfMonth);
+            String tempDate = stringDay+"/"+stringMonth+"/"+year; //İstediğimiz patternde olması için geçici bir startedDate oluşturuyoruz
+            setSelectedEndedDate(tempDate); //Global değişkene set ediyoruz
         }
     }
 
 
     public interface AddDailyReminderListener{
         void getDailyInfo(String eventName, String notifMessage, String currentDate, String endDate, String currentTime, String frequency);
+    }
+
+    private String addZero(int minute){
+        String stringMinute = String.valueOf(minute);
+        if(stringMinute.length() < 2){
+            stringMinute = "0" + minute;
+        }
+        return stringMinute;
+    }
+
+    private void setSelectedTime(String time){
+        DateFormat df = new DateFormat();
+        SimpleDateFormat sdf = new SimpleDateFormat("hh:mm");
+        try{
+            Date d = sdf.parse(time);
+            CharSequence newDate = df.format(DBConstants.TIME_FORMAT,d).toString();
+            selectedTime = newDate.toString();
+            Log.d("Serefiko", "setSelectedTime: " + selectedTime);
+        }catch (ParseException ex){
+            Log.v("Exception", ex.getLocalizedMessage());
+        }
+    }
+
+    private void setSelectedStartedDate(String date){
+        DateFormat df = new DateFormat();
+        SimpleDateFormat sdf = new SimpleDateFormat(DBConstants.DATE_FORMAT);
+        try{
+            Date d = sdf.parse(date);
+            CharSequence newDate = df.format(DBConstants.DATE_FORMAT,d).toString();
+            selectedStartedDate = newDate.toString();
+            Log.d("Serefiko", "setSelectedStartedDate: " + selectedStartedDate);
+        }catch (ParseException ex){
+            Log.v("Exception", ex.getLocalizedMessage());
+        }
+    }
+
+    private void setSelectedEndedDate(String date){
+        DateFormat df = new DateFormat();
+        SimpleDateFormat sdf = new SimpleDateFormat(DBConstants.DATE_FORMAT);
+        try{
+            Date d = sdf.parse(date);
+            CharSequence newDate = df.format(DBConstants.DATE_FORMAT,d).toString();
+            selectedEndedDate = newDate.toString();
+            Log.d("Serefiko", "setSelectedEndedDate: " + selectedEndedDate);
+        }catch (ParseException ex){
+            Log.v("Exception", ex.getLocalizedMessage());
+        }
     }
 }

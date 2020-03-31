@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements AddDailyReminder.
 
     FloatingActionMenu floatingActionMenu;
     FloatingActionButton floatingActionButton1, floatingActionButton2, floatingActionButton3, floatingActionButton4;
-    //DatabaseHelper myDB;
+    DatabaseHelper myDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
