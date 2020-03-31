@@ -23,7 +23,7 @@
     <string name="add_reminder_common_variables_event_name">Olay Adı</string>
     <string name="add_reminder_common_variables_notification_message">Bildirim Mesajı</string>
     <string name="add_reminder_common_variables_starting_date">Şimdiki Tarih</string>
-    <string name="add_reminder_common_variables_end_date">Bitiş Tarihi</string>
+    <string name="add_reminder_common_variables_end_date">Bitiş Tarihi (Sınırsız)</string>
     <string name="add_reminder_common_variables_clock">Şimdiki Saat</string>
 
     <string name="add_reminder_common_buttons_save_button">Kaydet</string>

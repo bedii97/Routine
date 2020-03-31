@@ -22,7 +22,7 @@
     <string name="add_reminder_common_variables_event_name">Event Name</string>
     <string name="add_reminder_common_variables_notification_message">Notification Message</string>
     <string name="add_reminder_common_variables_starting_date">Current Date</string>
-    <string name="add_reminder_common_variables_end_date">End Date</string>
+    <string name="add_reminder_common_variables_end_date">End Date (Infinity)</string>
     <string name="add_reminder_common_variables_clock">Current Time</string>
 
     <string name="add_reminder_common_buttons_save_button">Save</string>

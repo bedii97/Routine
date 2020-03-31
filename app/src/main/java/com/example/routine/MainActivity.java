@@ -2,6 +2,7 @@ package com.example.routine;
 
 import android.os.Bundle;
 
+import com.example.routine.DbHelper.DatabaseHelper;
 import com.example.routine.Dialog.AddDailyReminder;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements AddDailyReminder.
 
     FloatingActionMenu floatingActionMenu;
     FloatingActionButton floatingActionButton1, floatingActionButton2, floatingActionButton3, floatingActionButton4;
+    //DatabaseHelper myDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements AddDailyReminder.
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //Database Init
+        //myDB = new DatabaseHelper(this);
         floatingActionMenu = (FloatingActionMenu) findViewById(R.id.famMenu);
         floatingActionButton1 = (FloatingActionButton) findViewById(R.id.menu_item1);
         floatingActionButton2 = (FloatingActionButton) findViewById(R.id.menu_item2);
@@ -109,14 +113,14 @@ public class MainActivity extends AppCompatActivity implements AddDailyReminder.
     }
 
     @Override
-    public void getDailyInfo(String et1, String et2) {
-        Log.d("bediiko", "getDailyInfo: asd");
-        Toast.makeText(this, "Daily: ET1: " + et1 + " ET2: " + et2, Toast.LENGTH_SHORT).show();
+    public void getDailyInfo(String eventName, String notifMessage, String currentDate, String endDate, String currentTime, String frequency) {
+        String body = "EventName: " + eventName + " NotificationMessage: " + notifMessage + " CurrentDate: " + currentDate + " EndDate: " + endDate + " CurrentTime: " + currentDate + " Frequency: " + frequency;
+        Log.d("bediiko", "getDailyInfo: " + body);
+        Toast.makeText(this, body, Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void getWeeklyInfo(String et1, String et2) {
-        Log.d("bediiko", "getWeeklyInfo: Burada");
         Toast.makeText(this, "Weekly: ET1: " + et1 + " ET2: " + et2, Toast.LENGTH_SHORT).show();
     }
 
