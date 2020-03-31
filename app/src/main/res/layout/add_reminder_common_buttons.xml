@@ -8,7 +8,6 @@
 
     <Button
         android:id="@+id/add_reminder_common_buttons_save_btn"
-        style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
@@ -18,13 +17,13 @@
         android:textAllCaps="false"
         android:textColor="?attr/reminderSaveButtonTextColor"
         android:background="@drawable/general_button_background_selector"
+        android:stateListAnimator="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/add_reminder_common_buttons_cancel_btn"
-        style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
@@ -34,6 +33,7 @@
         android:textAllCaps="false"
         android:textColor="?attr/reminderCancelButtonTextColor"
         android:background="@android:color/transparent"
+        android:stateListAnimator="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/add_reminder_common_buttons_save_btn"
         app:layout_constraintTop_toTopOf="parent" />
