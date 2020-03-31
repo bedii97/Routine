@@ -11,11 +11,22 @@
 
     <string name="add_reminder_every_word">Her</string>
     <string name="add_daily_reminder_day">Günde Bir</string>
-
     <string name="add_weekly_reminder_week">Haftada Bir</string>
-
     <string name="add_monthly_reminder_month">Ayda Bir</string>
-
     <string name="add_yearly_reminder_Day">Yılda Bir</string>
+
+    <string name="add_daily_reminder_dialog_tag">Günlük Hatırlatıcı</string>
+    <string name="add_weekly_reminder_dialog_tag">Haftalık Hatırlatıcı</string>
+    <string name="add_monthly_reminder_dialog_tag">Aylık Hatırlatıcı</string>
+    <string name="add_yearly_reminder_dialog_tag">Yıllık Hatırlatıcı</string>
+
+    <string name="add_reminder_common_variables_event_name">Olay Adı</string>
+    <string name="add_reminder_common_variables_notification_message">Bildirim Mesajı</string>
+    <string name="add_reminder_common_variables_starting_date">Şimdiki Tarih</string>
+    <string name="add_reminder_common_variables_end_date">Bitiş Tarihi</string>
+    <string name="add_reminder_common_variables_clock">Şimdiki Saat</string>
+
+    <string name="add_reminder_common_buttons_save_button">Kaydet</string>
+    <string name="add_reminder_common_buttons_cancel_button">İptal</string>
 
 </resources>

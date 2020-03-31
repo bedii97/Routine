@@ -14,11 +14,20 @@
     <attr name="primaryTextColor" format="reference"/>
     <attr name="secondaryTextColor" format="reference"/>
     <attr name="thirdTextColor" format="reference"/>
-
     <attr name="labelsTextColor" format="reference"/>
 
     <attr name="labelsColorNormal" format="reference"/>
     <attr name="labelsColorPressed" format="reference"/>
     <attr name="labelsColorRipple" format="reference"/>
+
+    <attr name="editTextNormalColor" format="reference"/>
+    <attr name="editTextActivatedColor" format="reference"/>
+
+    <attr name="reminderSaveButtonTextColor" format="reference"/>
+    <attr name="reminderCancelButtonTextColor" format="reference"/>
+
+    <attr name="saveButtonColorNormal" format="reference"/>
+    <attr name="saveButtonColorFocus" format="reference"/>
+    <attr name="saveButtonColorPressed" format="reference"/>
 
 </resources>

@@ -25,6 +25,18 @@
         <item name="labelsColorPressed">@color/labelsColorPressedLight</item>
         <item name="labelsColorRipple">@color/labelsColorRippleLight</item>
 
+        <item name="colorControlNormal">@color/editTextNormalColorLight</item>
+        <item name="colorControlActivated">@color/editTextActivatedColorLight</item>
+
+        <!--Reminder Buttons Text Colors (Light)-->
+        <item name="reminderSaveButtonTextColor">@color/reminderSaveButtonTextColorLight</item>
+        <item name="reminderCancelButtonTextColor">@color/reminderCancelButtonTextColorLight</item>
+
+        <!--Reminder Buttons Colors (Light)-->
+        <item name="saveButtonColorNormal">@color/saveButtonColorNormalLight</item>
+        <item name="saveButtonColorFocus">@color/saveButtonColorFocusLight</item>
+        <item name="saveButtonColorPressed">@color/saveButtonColorPressedLight</item>
+
     </style>
 
 
@@ -54,6 +66,18 @@
         <item name="labelsColorPressed">@color/labelsColorPressedDark</item>
         <item name="labelsColorRipple">@color/labelsColorRippleDark</item>
 
+        <item name="colorControlNormal">@color/editTextNormalColorDark</item>
+        <item name="colorControlActivated">@color/editTextActivatedColorDark</item>
+
+        <!--Reminder Buttons Text Colors (Dark)-->
+        <item name="reminderSaveButtonTextColor">@color/reminderSaveButtonTextColorDark</item>
+        <item name="reminderCancelButtonTextColor">@color/reminderCancelButtonTextColorDark</item>
+
+        <!--Reminder Buttons Colors (Dark)-->
+        <item name="saveButtonColorNormal">@color/saveButtonColorNormalDark</item>
+        <item name="saveButtonColorFocus">@color/saveButtonColorFocusDark</item>
+        <item name="saveButtonColorPressed">@color/saveButtonColorPressedDark</item>
+
     </style>
 
 
@@ -64,8 +88,8 @@
     </style>
 
     <style name="EditTextTheme">
-        <item name="colorControlNormal">?attr/primaryTextColor</item>
-        <item name="colorControlActivated">?attr/secondaryTextColor</item>
+        <item name="colorControlNormal">?attr/editTextNormalColor</item>
+        <item name="colorControlActivated">?attr/editTextActivatedColor</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

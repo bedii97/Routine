@@ -27,6 +27,7 @@ public class AddWeeklyReminder extends DialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.add_weekly_reminder, null);
         builder.setView(view)
+                .setTitle(R.string.add_weekly_reminder_dialog_tag)
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

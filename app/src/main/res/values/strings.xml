@@ -10,11 +10,22 @@
 
     <string name="add_reminder_every_word">Every</string>
     <string name="add_daily_reminder_day">Days</string>
-
     <string name="add_weekly_reminder_week">Weeks</string>
-
     <string name="add_monthly_reminder_month">Months</string>
-
     <string name="add_yearly_reminder_Day">Years</string>
+
+    <string name="add_daily_reminder_dialog_tag">Daily Reminder</string>
+    <string name="add_weekly_reminder_dialog_tag">Weekly Reminder</string>
+    <string name="add_monthly_reminder_dialog_tag">Monthly Reminder</string>
+    <string name="add_yearly_reminder_dialog_tag">Yearly Reminder</string>
+    
+    <string name="add_reminder_common_variables_event_name">Event Name</string>
+    <string name="add_reminder_common_variables_notification_message">Notification Message</string>
+    <string name="add_reminder_common_variables_starting_date">Current Date</string>
+    <string name="add_reminder_common_variables_end_date">End Date</string>
+    <string name="add_reminder_common_variables_clock">Current Time</string>
+
+    <string name="add_reminder_common_buttons_save_button">Save</string>
+    <string name="add_reminder_common_buttons_cancel_button">Cancel</string>
 
 </resources>

@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
@@ -17,7 +18,8 @@ import com.example.routine.R;
 
 public class AddDailyReminder extends DialogFragment {
 
-    private EditText editText1, editText2;
+    private Button saveButton, cancelButton;
+    private EditText eventNameEditText, notificationMessageEditText, currentDateEditText, endDateEditText, currentTimeEditText;
     private AddDailyReminderListener listener;
 
     @NonNull
@@ -27,20 +29,7 @@ public class AddDailyReminder extends DialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.add_daily_reminder, null);
         builder.setView(view)
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                    }
-                })
-                .setPositiveButton("Accept", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        String et1 = editText1.getText().toString();
-                        String et2 = editText2.getText().toString();
-                        listener.getDailyInfo(et1, et2);
-                    }
-                });
+                .setTitle(R.string.add_daily_reminder_dialog_tag);
 
         return builder.create();
     }

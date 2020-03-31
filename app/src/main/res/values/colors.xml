@@ -16,12 +16,17 @@
 
     <color name="floatingActionButtonsShadowColor">#33000000</color>
 
+    <!--editText Colors (Light)-->
+    <color name="editTextNormalColorLight">#D9000000</color>
+    <color name="editTextActivatedColorLight">#FB8C00</color>
+
     <!--Text Colors (Light)-->
     <color name="primaryTextColorLight">#D9000000</color>
     <color name="secondaryTextColorLight">#99000000</color>
     <color name="thirdTextColorLight">#66000000</color>
     <color name="labelTextColorLight">#D9FFFFFF</color>
 
+    <!--floatingActionButton Colors (Light)-->
     <color name="floatingActionButtonNormalColorLight">#FF9800</color>
     <color name="floatingActionButtonPressedColorLight">#FB8C00</color>
     <color name="floatingActionButtonRippleColorLight">#FFB74D</color>
@@ -30,6 +35,16 @@
     <color name="labelsColorNormalLight">#333333</color>
     <color name="labelsColorPressedLight">#444444</color>
     <color name="labelsColorRippleLight">#66FFFFFF</color>
+
+    <!--Reminder Buttons Text Colors (Light)-->
+    <color name="reminderSaveButtonTextColorLight">#FFFFFF</color>
+    <color name="reminderCancelButtonTextColorLight">#66000000</color>
+
+    <!--Reminder Buttons Colors (Light)-->
+    <color name="saveButtonColorNormalLight">#FF9800</color>
+    <color name="saveButtonColorFocusLight">#FB8C00</color>
+    <color name="saveButtonColorPressedLight">#FFB74D</color>
+
 
 
 
@@ -41,12 +56,17 @@
     <color name="statusBarColorDark">#000000</color>
     <color name="cardViewColorDark">#424242</color>
 
+    <!--editText Colors (Dark)-->
+    <color name="editTextNormalColorDark">#66FFFFFF</color>
+    <color name="editTextActivatedColorDark">#FFB74D</color>
+
     <!--Text Colors (Dark)-->
     <color name="primaryTextColorDark">#D9FFFFFF</color>
     <color name="secondaryTextColorDark">#99FFFFFF</color>
     <color name="thirdTextColorDark">#66FFFFFF</color>
     <color name="labelTextColorDark">#D9000000</color>
 
+    <!--floatingActionButton Colors (Dark)-->
     <color name="floatingActionButtonNormalColorDark">#FFB74D</color>
     <color name="floatingActionButtonPressedColorDark">#FF9800</color>
     <color name="floatingActionButtonRippleColorDark">#FFCC80</color>
@@ -55,6 +75,15 @@
     <color name="labelsColorNormalDark">#DCDCDC</color>
     <color name="labelsColorPressedDark">#C9C9C9</color>
     <color name="labelsColorRippleDark">#99FFFFFF</color>
+
+    <!--Reminder Buttons Text Colors (Dark)-->
+    <color name="reminderSaveButtonTextColorDark">#99000000</color>
+    <color name="reminderCancelButtonTextColorDark">#99FFFFFF</color>
+
+    <!--Reminder Buttons Colors (Dark)-->
+    <color name="saveButtonColorNormalDark">#FFB74D</color>
+    <color name="saveButtonColorFocusDark">#FF9800</color>
+    <color name="saveButtonColorPressedDark">#FFCC80</color>
 
 
 </resources>
