@@ -40,11 +40,10 @@
             android:importantForAutofill="no"
             android:inputType="number"
             android:maxLength="2"
-            android:hint="1"
+            android:text="@string/add_reminder_default_number"
             android:textAlignment="center"
             android:textColor="?attr/primaryTextColor"
             android:textSize="14sp"
-            android:theme="@style/EditTextTheme"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/add_daily_reminder_every_word_tv"
             app:layout_constraintTop_toTopOf="parent" />
