@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -26,6 +27,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     private void createTableOne(SQLiteDatabase db) {
+        Log.d("dbko", "createTableOne: " + DBConstants.T_1_CREATE_QUERY);
         db.execSQL(DBConstants.T_1_CREATE_QUERY);
     }
 

@@ -2,11 +2,14 @@ package com.example.routine;
 
 import android.os.Bundle;
 
+import com.example.routine.Adapter.ReminderAdapter;
 import com.example.routine.DbHelper.DatabaseHelper;
 import com.example.routine.Dialog.AddDailyReminder;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.View;
@@ -17,14 +20,20 @@ import android.widget.Toast;
 import com.example.routine.Dialog.AddMonthlyReminder;
 import com.example.routine.Dialog.AddWeeklyReminder;
 import com.example.routine.Dialog.AddYearlyReminder;
+import com.example.routine.Model.Reminder;
 import com.github.clans.fab.FloatingActionMenu;
 import com.github.clans.fab.FloatingActionButton;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements AddDailyReminder.AddDailyReminderListener, AddWeeklyReminder.AddWeeklyReminderListener, AddMonthlyReminder.AddMonthlyReminderListener, AddYearlyReminder.AddYearlyReminderListener {
 
     FloatingActionMenu floatingActionMenu;
     FloatingActionButton floatingActionButton1, floatingActionButton2, floatingActionButton3, floatingActionButton4;
     DatabaseHelper myDB;
+    ReminderAdapter reminderAdapter;
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +44,17 @@ public class MainActivity extends AppCompatActivity implements AddDailyReminder.
 
         //Database Init
         //myDB = new DatabaseHelper(this);
+        List<Reminder> reminderList = new ArrayList<>();
+        Reminder reminder = new Reminder(1,"Erken Kalk", "Uyansana Lan", "123", "123", "123");
+        Reminder reminder2 = new Reminder(2,"Erken Kalk", "Uyansana Lan222222222222", "123", "123", "123");
+        reminderList.add(reminder);
+        reminderList.add(reminder2);
+        reminderAdapter = new ReminderAdapter(this, reminderList);
+        recyclerView = findViewById(R.id.activity_main_recycler_view);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        recyclerView.setAdapter(reminderAdapter);
+
         floatingActionMenu = (FloatingActionMenu) findViewById(R.id.famMenu);
         floatingActionButton1 = (FloatingActionButton) findViewById(R.id.menu_item1);
         floatingActionButton2 = (FloatingActionButton) findViewById(R.id.menu_item2);
