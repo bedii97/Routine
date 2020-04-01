@@ -118,7 +118,6 @@ public class AddDailyReminder extends DialogFragment implements TimePickerDialog
         TypedValue typedValue = new TypedValue();
         getContext().getTheme().resolveAttribute(R.attr.calendarAndClockColor, typedValue, true);
         @ColorInt int color = typedValue.data;
-
         dpd.setAccentColor(color);
 
         // If you're calling this from a support Fragment
@@ -155,6 +154,13 @@ public class AddDailyReminder extends DialogFragment implements TimePickerDialog
                 now.get(Calendar.MINUTE),
                 DateFormat.is24HourFormat(getContext())
         );
+
+        //Temaya uygun Saat rengi
+        TypedValue typedValue = new TypedValue();
+        getContext().getTheme().resolveAttribute(R.attr.calendarAndClockColor, typedValue, true);
+        @ColorInt int color = typedValue.data;
+        dpd.setAccentColor(color);
+
         // If you're calling this from a support Fragment
         dpd.show(getFragmentManager(), "timePickerDialog");
         // If you're calling this from an AppCompatActivity
