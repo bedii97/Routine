@@ -9,15 +9,17 @@ public class Reminder {
     private String StartedDate;
     private String EndedDate;
     private String Time;
+    private String Type;
     private DailyReminder dailyReminder;
 
-    public Reminder(Integer ID, String eventName, String notificationMessage, String startedDate, String endedDate, String time) {
+    public Reminder(Integer ID, String eventName, String notificationMessage, String startedDate, String endedDate, String time, String type) {
         this.ID = ID;
         EventName = eventName;
         NotificationMessage = notificationMessage;
         StartedDate = startedDate;
         EndedDate = endedDate;
         Time = time;
+        Type = type;
     }
 
     public Integer getID() {
@@ -66,6 +68,14 @@ public class Reminder {
 
     public void setTime(String time) {
         Time = time;
+    }
+
+    public String getType() {
+        return Type;
+    }
+
+    public void setType(String type) {
+        Type = type;
     }
 
     public DailyReminder getDailyReminder() {

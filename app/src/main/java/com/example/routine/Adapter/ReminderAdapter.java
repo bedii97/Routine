@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.routine.DbHelper.DBConstants;
 import com.example.routine.Model.DailyReminder;
 import com.example.routine.Model.Reminder;
 import com.example.routine.R;
@@ -50,9 +51,17 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.Remind
         String startedDate = currentItem.getStartedDate();
         String endedDate = currentItem.getEndedDate();
         String time = currentItem.getTime();
-        //DailyReminder currentDailyReminder = currentItem.getDailyReminder();
-        //String frequency = currentDailyReminder.getFrequency();
+        String type = currentItem.getType();
+        /*if(type.equals(DBConstants.TYPE_DAILY)){
+            DailyReminder currentDailyReminder = currentItem.getDailyReminder();
+            String frequency = currentDailyReminder.getFrequency();
+        }*/
         holder.eventNameTV.setText(eventName);
+        holder.notificationMessageTV.setText(notificationMessage);
+        holder.startingDateTV.setText(startedDate);
+        holder.endingDateTV.setText(endedDate);
+        holder.timeTV.setText(time);
+        //holder.startingDateTV.setText(startedDate);
     }
 
     @Override

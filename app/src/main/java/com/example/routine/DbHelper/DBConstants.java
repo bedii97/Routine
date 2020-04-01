@@ -11,13 +11,15 @@ public class DBConstants {
     public static final String T_1_C_STARTED_DATE = "Started_Date";
     public static final String T_1_C_ENDED_DATE = "Ended_Date";
     public static final String T_1_C_TIME = "Time";
+    public static final String T_1_C_TYPE = "Type";
     public static final String T_1_CREATE_QUERY = "CREATE TABLE " + T_1_NAME + " ("
             + T_1_C_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + T_1_C_EVENT_NAME + " TEXT, "
             + T_1_C_NOTIFICATION_MESSAGE + " TEXT, "
             + T_1_C_STARTED_DATE + " TEXT, "
             + T_1_C_ENDED_DATE + " TEXT, "
-            + T_1_C_TIME + " TEXT) ";
+            + T_1_C_TIME + " TEXT, "
+            + T_1_C_TYPE + " TEXT) ";
     //TABLE 2
     public static final String T_2_NAME = "daily_routine_table";
     public static final String T__2_C_ID = "ID";
@@ -25,6 +27,9 @@ public class DBConstants {
     public static final String T_2_CREATE_QUERY = "CREATE TABLE " + T_2_NAME + " ("
             + T__2_C_ID + " INTEGER PRIMARY KEY, "
             + T__2_C_FREQUENCY + " INTEGER)";
+
+    //DAILY
+    public static final String TYPE_DAILY = "daily";
 
     //DATETIME
     public static final String DATE_FORMAT = "dd/MM/yyyy";

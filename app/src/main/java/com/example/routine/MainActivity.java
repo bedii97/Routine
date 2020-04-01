@@ -3,6 +3,7 @@ package com.example.routine;
 import android.os.Bundle;
 
 import com.example.routine.Adapter.ReminderAdapter;
+import com.example.routine.DbHelper.DBConstants;
 import com.example.routine.DbHelper.DatabaseHelper;
 import com.example.routine.Dialog.AddDailyReminder;
 
@@ -44,11 +45,8 @@ public class MainActivity extends AppCompatActivity implements AddDailyReminder.
 
         //Database Init
         //myDB = new DatabaseHelper(this);
-        List<Reminder> reminderList = new ArrayList<>();
-        Reminder reminder = new Reminder(1,"Erken Kalk", "Uyansana Lan", "123", "123", "123");
-        Reminder reminder2 = new Reminder(2,"Erken Kalk", "Uyansana Lan222222222222", "123", "123", "123");
-        reminderList.add(reminder);
-        reminderList.add(reminder2);
+        DatabaseHelper dbHelper = new DatabaseHelper(this);
+        List<Reminder> reminderList = dbHelper.getReminder();
         reminderAdapter = new ReminderAdapter(this, reminderList);
         recyclerView = findViewById(R.id.activity_main_recycler_view);
         recyclerView.setHasFixedSize(true);
