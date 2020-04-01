@@ -75,7 +75,7 @@
             fab:fab_shadowRadius="4dp"
             fab:fab_shadowXOffset="0dp"
             fab:fab_shadowYOffset="2dp"
-            fab:fab_size="normal"
+            fab:fab_size="mini"
             fab:fab_label="@string/menu_item_daily" />
 
         <com.github.clans.fab.FloatingActionButton
@@ -88,7 +88,7 @@
             fab:fab_shadowRadius="4dp"
             fab:fab_shadowXOffset="0dp"
             fab:fab_shadowYOffset="2dp"
-            fab:fab_size="normal"
+            fab:fab_size="mini"
             fab:fab_label="@string/menu_item_weekly" />
 
         <com.github.clans.fab.FloatingActionButton
@@ -101,7 +101,7 @@
             fab:fab_shadowRadius="4dp"
             fab:fab_shadowXOffset="0dp"
             fab:fab_shadowYOffset="2dp"
-            fab:fab_size="normal"
+            fab:fab_size="mini"
             fab:fab_label="@string/menu_item_monthly" />
 
         <com.github.clans.fab.FloatingActionButton
@@ -114,7 +114,7 @@
             fab:fab_shadowRadius="4dp"
             fab:fab_shadowXOffset="0dp"
             fab:fab_shadowYOffset="2dp"
-            fab:fab_size="normal"
+            fab:fab_size="mini"
             fab:fab_label="@string/menu_item_yearly" />
 
     </com.github.clans.fab.FloatingActionMenu>

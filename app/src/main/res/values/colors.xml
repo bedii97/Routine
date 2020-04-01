@@ -45,6 +45,8 @@
     <color name="saveButtonColorFocusLight">#FB8C00</color>
     <color name="saveButtonColorPressedLight">#FFB74D</color>
 
+    <color name="calendarAndClockColorLight">#FF9800</color>
+
 
 
 
@@ -84,6 +86,8 @@
     <color name="saveButtonColorNormalDark">#FFB74D</color>
     <color name="saveButtonColorFocusDark">#FF9800</color>
     <color name="saveButtonColorPressedDark">#FFCC80</color>
+
+    <color name="calendarAndClockColorDark">#FFB74D</color>
 
 
 </resources>

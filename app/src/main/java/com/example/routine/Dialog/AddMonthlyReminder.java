@@ -26,8 +26,7 @@ public class AddMonthlyReminder extends DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.add_monthly_reminder, null);
-        builder.setView(view)
-                .setTitle(R.string.add_monthly_reminder_dialog_tag);
+        builder.setView(view);
 
         return builder.create();
     }

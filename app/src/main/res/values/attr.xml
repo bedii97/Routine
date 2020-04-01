@@ -30,4 +30,6 @@
     <attr name="saveButtonColorFocus" format="reference"/>
     <attr name="saveButtonColorPressed" format="reference"/>
 
+    <attr name="calendarAndClockColor" format="reference"/>
+
 </resources>

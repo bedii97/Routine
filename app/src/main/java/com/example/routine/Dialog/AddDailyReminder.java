@@ -3,15 +3,19 @@ package com.example.routine.Dialog;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
@@ -46,8 +50,8 @@ public class AddDailyReminder extends DialogFragment implements TimePickerDialog
         final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.add_daily_reminder, null);
-        builder.setView(view)
-                .setTitle(R.string.add_daily_reminder_dialog_tag);
+        builder.setView(view);
+
         initViews(view);
         getDefaultData();
         saveButton.setOnClickListener(new View.OnClickListener() {
@@ -109,6 +113,14 @@ public class AddDailyReminder extends DialogFragment implements TimePickerDialog
                 now.get(Calendar.MONTH), // Initial month selection
                 now.get(Calendar.DAY_OF_MONTH) // Inital day selection
         );
+
+        //Temaya uygun Takvim rengi
+        TypedValue typedValue = new TypedValue();
+        getContext().getTheme().resolveAttribute(R.attr.calendarAndClockColor, typedValue, true);
+        @ColorInt int color = typedValue.data;
+
+        dpd.setAccentColor(color);
+
         // If you're calling this from a support Fragment
         dpd.show(getFragmentManager(), tag);
         // If you're calling this from an AppCompatActivity

@@ -37,6 +37,8 @@
         <item name="saveButtonColorFocus">@color/saveButtonColorFocusLight</item>
         <item name="saveButtonColorPressed">@color/saveButtonColorPressedLight</item>
 
+        <item name="calendarAndClockColor">@color/calendarAndClockColorLight</item>
+
     </style>
 
 
@@ -77,6 +79,8 @@
         <item name="saveButtonColorNormal">@color/saveButtonColorNormalDark</item>
         <item name="saveButtonColorFocus">@color/saveButtonColorFocusDark</item>
         <item name="saveButtonColorPressed">@color/saveButtonColorPressedDark</item>
+
+        <item name="calendarAndClockColor">@color/calendarAndClockColorDark</item>
 
     </style>
 
