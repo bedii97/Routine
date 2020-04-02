@@ -7,6 +7,10 @@
     <attr name="floatingActionMenuPressedColor" format="reference"/>
     <attr name="floatingActionMenuRippleColor" format="reference"/>
 
+    <attr name="floatingActionButtonNormalColor" format="reference"/>
+    <attr name="floatingActionButtonPressedColor" format="reference"/>
+    <attr name="floatingActionButtonRippleColor" format="reference"/>
+
     <attr name="activityBackgroundColor" format="reference"/>
     <attr name="toolbarColor" format="reference"/>
     <attr name="cardViewColor" format="reference"/>

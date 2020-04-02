@@ -26,16 +26,14 @@
         android:id="@+id/add_reminder_common_buttons_cancel_btn"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        android:stateListAnimator="@null"
         android:text="@string/add_reminder_common_buttons_cancel_button"
         android:textAllCaps="false"
         android:textColor="?attr/reminderCancelButtonTextColor"
-        android:background="@android:color/transparent"
-        android:stateListAnimator="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/add_reminder_common_buttons_save_btn"
         app:layout_constraintEnd_toStartOf="@+id/add_reminder_common_buttons_save_btn"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/add_reminder_common_buttons_save_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

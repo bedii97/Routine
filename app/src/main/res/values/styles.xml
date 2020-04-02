@@ -15,10 +15,15 @@
         <item name="thirdTextColor">@color/thirdTextColorLight</item>
         <item name="labelsTextColor">@color/labelTextColorLight</item>
 
+        <!--Floating Action Menu Button Colors (Light)-->
+        <item name="floatingActionMenuNormalColor">@color/floatingActionMenuButtonNormalColorLight</item>
+        <item name="floatingActionMenuPressedColor">@color/floatingActionMenuButtonPressedColorLight</item>
+        <item name="floatingActionMenuRippleColor">@color/floatingActionMenuButtonRippleColorLight</item>
+
         <!--Floating Action Button Colors (Light)-->
-        <item name="floatingActionMenuNormalColor">@color/floatingActionButtonNormalColorLight</item>
-        <item name="floatingActionMenuPressedColor">@color/floatingActionButtonPressedColorLight</item>
-        <item name="floatingActionMenuRippleColor">@color/floatingActionButtonRippleColorLight</item>
+        <item name="floatingActionButtonNormalColor">@color/floatingActionButtonNormalColorLight</item>
+        <item name="floatingActionButtonPressedColor">@color/floatingActionButtonPressedColorLight</item>
+        <item name="floatingActionButtonRippleColor">@color/floatingActionButtonRippleColorLight</item>
 
         <!--FAB Labels Colors (Light)-->
         <item name="labelsColorNormal">@color/labelsColorNormalLight</item>
@@ -59,9 +64,14 @@
         <item name="labelsTextColor">@color/labelTextColorDark</item>
 
         <!--Floating Action Button Colors (Dark)-->
-        <item name="floatingActionMenuNormalColor">@color/floatingActionButtonNormalColorDark</item>
-        <item name="floatingActionMenuPressedColor">@color/floatingActionButtonPressedColorDark</item>
-        <item name="floatingActionMenuRippleColor">@color/floatingActionButtonRippleColorDark</item>
+        <item name="floatingActionMenuNormalColor">@color/floatingActionMenuButtonNormalColorDark</item>
+        <item name="floatingActionMenuPressedColor">@color/floatingActionMenuButtonPressedColorDark</item>
+        <item name="floatingActionMenuRippleColor">@color/floatingActionMenuButtonRippleColorDark</item>
+
+        <!--Floating Action Button Colors (Dark)-->
+        <item name="floatingActionButtonNormalColor">@color/floatingActionButtonNormalColorDark</item>
+        <item name="floatingActionButtonPressedColor">@color/floatingActionButtonPressedColorDark</item>
+        <item name="floatingActionButtonRippleColor">@color/floatingActionButtonRippleColorDark</item>
 
         <!--FAB Labels Colors (Dark)-->
         <item name="labelsColorNormal">@color/labelsColorNormalDark</item>
