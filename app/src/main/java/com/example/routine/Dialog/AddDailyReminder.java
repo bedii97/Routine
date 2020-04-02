@@ -28,8 +28,10 @@ import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 public class AddDailyReminder extends DialogFragment implements TimePickerDialog.OnTimeSetListener, DatePickerDialog.OnDateSetListener {
 
@@ -41,7 +43,7 @@ public class AddDailyReminder extends DialogFragment implements TimePickerDialog
 
     private Button saveButton, cancelButton;
     private EditText eventNameEditText, notificationMessageEditText, currentDateEditText, endDateEditText, currentTimeEditText, frequencyEditText;
-    private String selectedEventName, selectedNotificationMessage, selectedStartedDate, selectedEndedDate, selectedTime, selectedFrequency;
+    private String selectedEventName, selectedNotificationMessage, selectedStartedDate, selectedEndedDate = "0", selectedTime, selectedFrequency;
     private AddDailyReminderListener listener;
 
     @NonNull
@@ -91,18 +93,29 @@ public class AddDailyReminder extends DialogFragment implements TimePickerDialog
         return builder.create();
     }
 
+    /**
+     * Save Reminder
+     */
     private void saveButton() {
-        selectedEventName = eventNameEditText.getText().toString();
-        selectedNotificationMessage = notificationMessageEditText.getText().toString();
-        selectedFrequency = frequencyEditText.getText().toString();
+        ArrayList<EditText> inputs = new ArrayList<EditText>();
+        inputs.add(eventNameEditText);
+        inputs.add(notificationMessageEditText);
+        inputs.add(currentDateEditText);
+        //inputs.add(endDateEditText);
+        inputs.add(currentTimeEditText);
+        inputs.add(frequencyEditText);
 
-        String body = "EventName: " + selectedEventName + " NotificationMessage: " + selectedNotificationMessage + " CurrentDate: " + selectedStartedDate + " EndDate: " + selectedEndedDate + " CurrentTime: " + selectedTime + " Frequency: " + selectedFrequency;
-        Log.d("bediiko", "getDailyInfo: " + body);
-
-        DatabaseHelper databaseHelper = new DatabaseHelper(getContext());
-        Long id = databaseHelper.insertDaily(selectedEventName, selectedNotificationMessage, selectedStartedDate, selectedEndedDate, selectedTime, selectedFrequency);
-        Toast.makeText(getContext(), "ID: " + id, Toast.LENGTH_SHORT).show();
-        getDialog().dismiss();
+        if(!inputCheck(inputs)){
+            selectedEventName = eventNameEditText.getText().toString();
+            selectedNotificationMessage = notificationMessageEditText.getText().toString();
+            selectedFrequency = frequencyEditText.getText().toString();
+            //selectedEndedDate = ((endDateEditText.getText().toString().trim().length()>=1) ? endDateEditText.getText().toString() : "0");//If condition
+            DatabaseHelper databaseHelper = new DatabaseHelper(getContext());
+            long id = databaseHelper.insertDaily(selectedEventName, selectedNotificationMessage, selectedStartedDate, selectedEndedDate, selectedTime, selectedFrequency);
+            Toast.makeText(getContext(), "ID: " + id, Toast.LENGTH_SHORT).show();
+            listener.refreshRecyclerView();
+            getDialog().dismiss();
+        }
     }
 
     private void showDatePicker(String tag) {
@@ -223,7 +236,7 @@ public class AddDailyReminder extends DialogFragment implements TimePickerDialog
 
 
     public interface AddDailyReminderListener{
-        void getDailyInfo(String eventName, String notifMessage, String currentDate, String endDate, String currentTime, String frequency);
+        void refreshRecyclerView();
     }
 
     private String addZero(int minute){
@@ -271,5 +284,20 @@ public class AddDailyReminder extends DialogFragment implements TimePickerDialog
         }catch (ParseException ex){
             Log.v("Exception", ex.getLocalizedMessage());
         }
+    }
+
+    /**
+     * @param inputs
+     * @return true if it is empty
+     */
+    private boolean inputCheck(ArrayList<EditText> inputs){
+        boolean status = false;
+        for (EditText input : inputs) {
+            if (input.getText().toString().trim().length()<= 0){
+                input.setError("U must fill");
+                status = true;
+            }
+        }
+        return status;
     }
 }
