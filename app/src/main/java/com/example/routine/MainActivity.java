@@ -45,24 +45,19 @@ public class MainActivity extends AppCompatActivity implements AddDailyReminder.
 
         //Database Init
         //myDB = new DatabaseHelper(this);
-        DatabaseHelper dbHelper = new DatabaseHelper(this);
-        List<Reminder> reminderList = dbHelper.getReminder();
-        reminderAdapter = new ReminderAdapter(this, reminderList);
-        recyclerView = findViewById(R.id.activity_main_recycler_view);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        recyclerView.setAdapter(reminderAdapter);
+        getDataBaseData();
 
-        floatingActionMenu = (FloatingActionMenu) findViewById(R.id.famMenu);
-        floatingActionButton1 = (FloatingActionButton) findViewById(R.id.menu_item1);
-        floatingActionButton2 = (FloatingActionButton) findViewById(R.id.menu_item2);
-        floatingActionButton3 = (FloatingActionButton) findViewById(R.id.menu_item3);
-        floatingActionButton4 = (FloatingActionButton) findViewById(R.id.menu_item4);
+        floatingActionMenu = findViewById(R.id.famMenu);
+        floatingActionButton1 = findViewById(R.id.menu_item1);
+        floatingActionButton2 = findViewById(R.id.menu_item2);
+        floatingActionButton3 = findViewById(R.id.menu_item3);
+        floatingActionButton4 = findViewById(R.id.menu_item4);
 
         floatingActionButton1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 openAddDailyReminderDialog();
+                floatingActionMenu.close(false);
             }
         });
 
@@ -86,6 +81,16 @@ public class MainActivity extends AppCompatActivity implements AddDailyReminder.
                 openAddYearlyReminderDialog();
             }
         });
+    }
+
+    private void getDataBaseData() {
+        DatabaseHelper dbHelper = new DatabaseHelper(this);
+        List<Reminder> reminderList = dbHelper.getReminder();
+        reminderAdapter = new ReminderAdapter(this, reminderList);
+        recyclerView = findViewById(R.id.activity_main_recycler_view);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        recyclerView.setAdapter(reminderAdapter);
     }
 
     private void openAddDailyReminderDialog() {
@@ -131,10 +136,9 @@ public class MainActivity extends AppCompatActivity implements AddDailyReminder.
     }
 
     @Override
-    public void getDailyInfo(String eventName, String notifMessage, String currentDate, String endDate, String currentTime, String frequency) {
-        String body = "EventName: " + eventName + " NotificationMessage: " + notifMessage + " CurrentDate: " + currentDate + " EndDate: " + endDate + " CurrentTime: " + currentDate + " Frequency: " + frequency;
-        Log.d("bediiko", "getDailyInfo: " + body);
-        Toast.makeText(this, body, Toast.LENGTH_LONG).show();
+    public void refreshRecyclerView() {
+        getDataBaseData();
+        //reminderAdapter.notifyDataSetChanged();
     }
 
     @Override

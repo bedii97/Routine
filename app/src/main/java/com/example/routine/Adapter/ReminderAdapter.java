@@ -52,16 +52,16 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.Remind
         String endedDate = currentItem.getEndedDate();
         String time = currentItem.getTime();
         String type = currentItem.getType();
-        /*if(type.equals(DBConstants.TYPE_DAILY)){
+        if(type.equals(DBConstants.TYPE_DAILY)){
             DailyReminder currentDailyReminder = currentItem.getDailyReminder();
             String frequency = currentDailyReminder.getFrequency();
-        }*/
+            holder.frequencyTV.setText(frequency);
+        }
         holder.eventNameTV.setText(eventName);
         holder.notificationMessageTV.setText(notificationMessage);
         holder.startingDateTV.setText(startedDate);
         holder.endingDateTV.setText(endedDate);
         holder.timeTV.setText(time);
-        //holder.startingDateTV.setText(startedDate);
     }
 
     @Override

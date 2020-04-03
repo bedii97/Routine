@@ -9,6 +9,7 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
+import com.example.routine.Model.DailyReminder;
 import com.example.routine.Model.Reminder;
 
 import java.util.ArrayList;
@@ -76,6 +77,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         ""+cursor.getString(cursor.getColumnIndex(DBConstants.T_1_C_TIME)),
                         ""+cursor.getString(cursor.getColumnIndex(DBConstants.T_1_C_TYPE))
                 );
+                switch (reminder.getType()){
+                    case DBConstants.TYPE_DAILY:
+                        String selectDailtQuery = "SELECT * FROM " + DBConstants.T_2_NAME + " WHERE " + DBConstants.T__2_C_ID + " = " + reminder.getID();
+                        Cursor cursorDaily = db.rawQuery(selectDailtQuery ,null);
+                        cursorDaily.moveToFirst();
+                        String frequency = cursorDaily.getString(cursorDaily.getColumnIndex(DBConstants.T__2_C_FREQUENCY));
+                        DailyReminder dailyReminder = new DailyReminder(""+frequency);
+                        reminder.setDailyReminder(dailyReminder);
+                        break;
+                }
                 reminders.add(reminder);
             } while (cursor.moveToNext());
         }
