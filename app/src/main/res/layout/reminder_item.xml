@@ -27,21 +27,28 @@
             android:id="@+id/reminder_item_event_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/reminder_item_event_name"/>
+            android:text="@string/reminder_item_event_name"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="?attr/primaryTextColor"/>
 
         <TextView
             android:id="@+id/reminder_item_notification_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@string/reminder_item_notification_message"/>
+            android:text="@string/reminder_item_notification_message"
+            android:textSize="17sp"
+            android:textColor="?attr/primaryTextColor"/>
 
         <TextView
             android:id="@+id/reminder_item_starting_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@string/reminder_item_starting_date"/>
+            android:text="@string/reminder_item_starting_date"
+            android:textSize="15sp"
+            android:textColor="?attr/primaryTextColor"/>
 
         <TextView
             android:id="@+id/reminder_item_end_date"
