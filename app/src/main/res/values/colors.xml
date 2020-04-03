@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!--Main Colors (Light)-->
-    <color name="mainColorLight">#F57D00</color>
-    <color name="mainColorDarkerLight">#E65200</color>
-    <color name="mainColorLighterLight">#FFA826</color>
-
-    <!--Side Colors (Light)-->
-    <color name="sideColorLight">#006DFF</color>
-    <color name="sideColorDarkerLight">#2935CC</color>
-    <color name="sideColorLighterLight">#00A1FF</color>
-
-    <!--Main Colors (Dark)-->
+    <color name="mainColor">#F57D00</color>
+    <color name="mainColorDarker">#E65200</color>
     <color name="mainColorDark">#FF9900</color>
-    <color name="mainColorDarkerDark">#F57D00</color>
-    <color name="mainColorLighterDark">#FFB84D</color>
-
-    <!--Side Colors (Dark)-->
-    <color name="sideColorDark">#0081FF</color>
-    <color name="sideColorDarkerDark">#195AEC</color>
-    <color name="sideColorLighterDark">#00A1FF</color>
 
     <!--FAB Icons Colors-->
     <color name="fabIconMainColor">#FFFFFF</color>
@@ -33,15 +17,15 @@
 
     <!--Ground Colors (Light)-->
     <color name="backgroundColorLight">#EEEEEE</color>
-    <color name="toolbarColorLight">@color/mainColorLight</color>
-    <color name="statusBarColorLight">@color/mainColorDarkerLight</color>
+    <color name="toolbarColorLight">@color/mainColor</color>
+    <color name="statusBarColorLight">@color/mainColorDarker</color>
     <color name="cardViewColorLight">#FFFFFF</color>
 
     <color name="floatingActionButtonsShadowColor">#33000000</color>
 
     <!--editText Colors (Light)-->
     <color name="editTextNormalColorLight">#D9000000</color>
-    <color name="editTextActivatedColorLight">@color/mainColorDarkerLight</color>
+    <color name="editTextActivatedColorLight">@color/mainColor</color>
 
     <!--Text Colors (Light)-->
     <color name="primaryTextColorLight">#D9000000</color>
@@ -50,14 +34,14 @@
     <color name="labelTextColorLight">#D9FFFFFF</color>
 
     <!--floatingActionMenuButton Colors (Light)-->
-    <color name="floatingActionMenuButtonNormalColorLight">@color/sideColorDark</color>
-    <color name="floatingActionMenuButtonPressedColorLight">@color/sideColorDarkerLight</color>
-    <color name="floatingActionMenuButtonRippleColorLight">@color/sideColorLighterLight</color>
+    <color name="floatingActionMenuButtonNormalColorLight">#FF9900</color>
+    <color name="floatingActionMenuButtonPressedColorLight">#FFA826</color>
+    <color name="floatingActionMenuButtonRippleColorLight">#FFB84D</color>
 
     <!--floatingActionButton Colors (Light)-->
-    <color name="floatingActionButtonNormalColorLight">@color/sideColorDarkerLight</color>
-    <color name="floatingActionButtonPressedColorLight">@color/sideColorLight</color>
-    <color name="floatingActionButtonRippleColorLight">@color/sideColorLighterLight</color>
+    <color name="floatingActionButtonNormalColorLight">#FB8D00</color>
+    <color name="floatingActionButtonPressedColorLight">#FFA826</color>
+    <color name="floatingActionButtonRippleColorLight">#FFB84D</color>
 
     <!--FAB Labels Colors (Light)-->
     <color name="labelsColorNormalLight">#333333</color>
@@ -69,11 +53,11 @@
     <color name="reminderCancelButtonTextColorLight">#99000000</color>
 
     <!--Reminder Buttons Colors (Light)-->
-    <color name="saveButtonColorNormalLight">@color/mainColorLight</color>
-    <color name="saveButtonColorFocusLight">@color/mainColorDarkerLight</color>
-    <color name="saveButtonColorPressedLight">@color/mainColorLighterLight</color>
+    <color name="saveButtonColorNormalLight">#FF9900</color>
+    <color name="saveButtonColorFocusLight">#FFA826</color>
+    <color name="saveButtonColorPressedLight">#FFB84D</color>
 
-    <color name="calendarAndClockColorLight">@color/mainColorLight</color>
+    <color name="calendarAndClockColorLight">@color/mainColor</color>
 
 
 
@@ -99,14 +83,14 @@
     <color name="labelTextColorDark">#D9000000</color>
 
     <!--floatingActionMenuButton Colors (Dark)-->
-    <color name="floatingActionMenuButtonNormalColorDark">@color/sideColorDark</color>
-    <color name="floatingActionMenuButtonPressedColorDark">@color/sideColorDarkerDark</color>
-    <color name="floatingActionMenuButtonRippleColorDark">@color/sideColorLighterDark</color>
+    <color name="floatingActionMenuButtonNormalColorDark">#FF9900</color>
+    <color name="floatingActionMenuButtonPressedColorDark">#FFA826</color>
+    <color name="floatingActionMenuButtonRippleColorDark">#FFB84D</color>
 
     <!--floatingActionButton Colors (Dark)-->
-    <color name="floatingActionButtonNormalColorDark">@color/sideColorDarkerDark</color>
-    <color name="floatingActionButtonPressedColorDark">@color/sideColorDark</color>
-    <color name="floatingActionButtonRippleColorDark">@color/sideColorLighterDark</color>
+    <color name="floatingActionButtonNormalColorDark">#F57D00</color>
+    <color name="floatingActionButtonPressedColorDark">#FB8D00</color>
+    <color name="floatingActionButtonRippleColorDark">#FF9900</color>
 
     <!--FAB Labels Colors (Dark)-->
     <color name="labelsColorNormalDark">#DCDCDC</color>
@@ -118,9 +102,9 @@
     <color name="reminderCancelButtonTextColorDark">#66FFFFFF</color>
 
     <!--Reminder Buttons Colors (Dark)-->
-    <color name="saveButtonColorNormalDark">@color/mainColorDark</color>
-    <color name="saveButtonColorFocusDark">@color/mainColorDarkerDark</color>
-    <color name="saveButtonColorPressedDark">@color/mainColorLighterDark</color>
+    <color name="saveButtonColorNormalDark">#FF9900</color>
+    <color name="saveButtonColorFocusDark">#FFA826</color>
+    <color name="saveButtonColorPressedDark">#FFB84D</color>
 
     <color name="calendarAndClockColorDark">@color/mainColorDark</color>
 
