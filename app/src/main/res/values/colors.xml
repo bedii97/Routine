@@ -2,9 +2,9 @@
 <resources>
 
     <!--Main Colors (Light)-->
-    <color name="mainColorLight">#FF9900</color>
-    <color name="mainColorDarkerLight">#F57D00</color>
-    <color name="mainColorLighterLight">#FFCD80</color>
+    <color name="mainColorLight">#F57D00</color>
+    <color name="mainColorDarkerLight">#E65200</color>
+    <color name="mainColorLighterLight">#FFA826</color>
 
     <!--Side Colors (Light)-->
     <color name="sideColorLight">#006DFF</color>
@@ -12,14 +12,14 @@
     <color name="sideColorLighterLight">#00A1FF</color>
 
     <!--Main Colors (Dark)-->
-    <color name="mainColorDark">#FFB84D</color>
-    <color name="mainColorDarkerDark">#FFA826</color>
-    <color name="mainColorLighterDark">#FFCD80</color>
+    <color name="mainColorDark">#FF9900</color>
+    <color name="mainColorDarkerDark">#F57D00</color>
+    <color name="mainColorLighterDark">#FFB84D</color>
 
     <!--Side Colors (Dark)-->
-    <color name="sideColorDark">#00A1FF</color>
-    <color name="sideColorDarkerDark">#0081FF</color>
-    <color name="sideColorLighterDark">#87C9FF</color>
+    <color name="sideColorDark">#0081FF</color>
+    <color name="sideColorDarkerDark">#195AEC</color>
+    <color name="sideColorLighterDark">#00A1FF</color>
 
     <!--FAB Icons Colors-->
     <color name="fabIconMainColor">#FFFFFF</color>
@@ -28,6 +28,8 @@
 
 
     <!--LIGHT MODE COLORS-->
+
+    <color name="appLabelColorLight">#FFFFFF</color>
 
     <!--Ground Colors (Light)-->
     <color name="backgroundColorLight">#EEEEEE</color>
@@ -48,7 +50,7 @@
     <color name="labelTextColorLight">#D9FFFFFF</color>
 
     <!--floatingActionMenuButton Colors (Light)-->
-    <color name="floatingActionMenuButtonNormalColorLight">@color/sideColorLight</color>
+    <color name="floatingActionMenuButtonNormalColorLight">@color/sideColorDark</color>
     <color name="floatingActionMenuButtonPressedColorLight">@color/sideColorDarkerLight</color>
     <color name="floatingActionMenuButtonRippleColorLight">@color/sideColorLighterLight</color>
 
@@ -78,11 +80,13 @@
 
     <!--DARK MODE COLORS-->
 
+    <color name="appLabelColorDark">#FFB84D</color>
+
     <!--Ground Colors (Dark)-->
-    <color name="backgroundColorDark">#303030</color>
-    <color name="toolbarColorDark">#212121</color>
+    <color name="backgroundColorDark">#121212</color>
+    <color name="toolbarColorDark">#1F1F1F</color>
     <color name="statusBarColorDark">#000000</color>
-    <color name="cardViewColorDark">#424242</color>
+    <color name="cardViewColorDark">#1D1D1D</color>
 
     <!--editText Colors (Dark)-->
     <color name="editTextNormalColorDark">#66FFFFFF</color>
@@ -110,8 +114,8 @@
     <color name="labelsColorRippleDark">#99FFFFFF</color>
 
     <!--Reminder Buttons Text Colors (Dark)-->
-    <color name="reminderSaveButtonTextColorDark">#99000000</color>
-    <color name="reminderCancelButtonTextColorDark">#99FFFFFF</color>
+    <color name="reminderSaveButtonTextColorDark">#D9FFFFFF</color>
+    <color name="reminderCancelButtonTextColorDark">#66FFFFFF</color>
 
     <!--Reminder Buttons Colors (Dark)-->
     <color name="saveButtonColorNormalDark">@color/mainColorDark</color>

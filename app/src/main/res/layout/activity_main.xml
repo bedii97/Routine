@@ -18,6 +18,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
             android:background="?attr/toolbarColor"
             android:contentInsetLeft="0dp"
             android:contentInsetStart="0dp"
@@ -40,7 +41,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:text="@string/app_name"
-                    android:textColor="#D9FFFFFF"
+                    android:textColor="?attr/appLabelColor"
                     android:textSize="20sp"
                     android:layout_gravity="center"/>
 

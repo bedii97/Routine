@@ -3,6 +3,8 @@
     <!-- Light Theme -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
+        <item name="appLabelColor">@color/appLabelColorLight</item>
+
         <!--Ground Colors (Light)-->
         <item name="android:statusBarColor">@color/statusBarColorLight</item>
         <item name="activityBackgroundColor">@color/backgroundColorLight</item>
@@ -51,6 +53,8 @@
     <!-- Dark Theme -->
     <style name="AppThemeDark" parent="Theme.AppCompat.DayNight.NoActionBar">
 
+        <item name="appLabelColor">@color/appLabelColorDark</item>
+
         <!--Ground Colors (Dark)-->
         <item name="android:statusBarColor">@color/statusBarColorDark</item>
         <item name="activityBackgroundColor">@color/backgroundColorDark</item>
@@ -91,6 +95,8 @@
         <item name="saveButtonColorPressed">@color/saveButtonColorPressedDark</item>
 
         <item name="calendarAndClockColor">@color/calendarAndClockColorDark</item>
+
+        <item name="mdtp_theme_dark">true</item>
 
     </style>
 

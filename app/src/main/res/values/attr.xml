@@ -3,6 +3,8 @@
     
     <attr name="coloredTexts" format="reference"/>
 
+    <attr name="appLabelColor" format="reference"/>
+
     <attr name="floatingActionMenuNormalColor" format="reference"/>
     <attr name="floatingActionMenuPressedColor" format="reference"/>
     <attr name="floatingActionMenuRippleColor" format="reference"/>
