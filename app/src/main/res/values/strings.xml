@@ -36,4 +36,7 @@
     <string name="add_reminder_common_buttons_save_button">Save</string>
     <string name="add_reminder_common_buttons_cancel_button">Cancel</string>
 
+    <string name="time_prefix">Time: </string>
+    <string name="date_prefix">Date: </string>
+
 </resources>

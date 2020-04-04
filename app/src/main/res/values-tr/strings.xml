@@ -37,4 +37,7 @@
     <string name="add_reminder_common_buttons_save_button">Kaydet</string>
     <string name="add_reminder_common_buttons_cancel_button">İptal</string>
 
+    <string name="time_prefix">Saat: </string>
+    <string name="date_prefix">Tarih: </string>
+
 </resources>

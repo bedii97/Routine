@@ -3,8 +3,6 @@ package com.example.routine.Dialog;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.util.Log;
@@ -20,6 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
+import com.example.routine.AlarmReceiver;
 import com.example.routine.DbHelper.DBConstants;
 import com.example.routine.DbHelper.DatabaseHelper;
 import com.example.routine.R;
@@ -31,7 +30,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
 
 public class AddDailyReminder extends DialogFragment implements TimePickerDialog.OnTimeSetListener, DatePickerDialog.OnDateSetListener {
 
@@ -41,9 +39,15 @@ public class AddDailyReminder extends DialogFragment implements TimePickerDialog
     private static String CURRENT_DATE_TAG = "currentDateDialog";
     private static String END_DATE_TAG = "endDateDialog";
 
+    private static final long DAY_MIL_CONSTANTS = 86400000L;
+
+
     private Button saveButton, cancelButton;
     private EditText eventNameEditText, notificationMessageEditText, currentDateEditText, endDateEditText, currentTimeEditText, frequencyEditText;
     private String selectedEventName, selectedNotificationMessage, selectedStartedDate, selectedEndedDate = "0", selectedTime, selectedFrequency;
+    private int selectedHourOfDay, selectedMinute;
+    private int mEndMonth, mEndYear, mEndDayOfMonth;
+    private int mStartMonth, mStartYear, mStartDayOfMonth;
     private AddDailyReminderListener listener;
 
     @NonNull
@@ -53,6 +57,7 @@ public class AddDailyReminder extends DialogFragment implements TimePickerDialog
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.add_daily_reminder, null);
         builder.setView(view);
+        setConstants();
 
         initViews(view);
         getDefaultData();
@@ -93,11 +98,16 @@ public class AddDailyReminder extends DialogFragment implements TimePickerDialog
         return builder.create();
     }
 
+    private void setConstants() {
+        TIME_PREFIX = getString(R.string.time_prefix);
+        DATE_PREFIX = getString(R.string.date_prefix);
+    }
+
     /**
      * Save Reminder
      */
     private void saveButton() {
-        ArrayList<EditText> inputs = new ArrayList<EditText>();
+        ArrayList<EditText> inputs = new ArrayList<>();
         inputs.add(eventNameEditText);
         inputs.add(notificationMessageEditText);
         inputs.add(currentDateEditText);
@@ -114,6 +124,18 @@ public class AddDailyReminder extends DialogFragment implements TimePickerDialog
             long id = databaseHelper.insertDaily(selectedEventName, selectedNotificationMessage, selectedStartedDate, selectedEndedDate, selectedTime, selectedFrequency);
             Toast.makeText(getContext(), "ID: " + id, Toast.LENGTH_SHORT).show();
             listener.refreshRecyclerView();
+            //SetRepeatAlarm
+            AlarmReceiver alarmReceiver = new AlarmReceiver();
+            Calendar startTime = Calendar.getInstance();
+            startTime.set(Calendar.DAY_OF_MONTH, mStartDayOfMonth);
+            startTime.set(Calendar.MONTH, mStartMonth);
+            startTime.set(Calendar.YEAR, mStartYear);
+            startTime.set(Calendar.HOUR_OF_DAY, selectedHourOfDay);
+            startTime.set(Calendar.MINUTE, selectedMinute);
+            startTime.set(Calendar.SECOND, 0);
+            long repeatNo = DAY_MIL_CONSTANTS;
+            alarmReceiver.setRepeatAlarm(getContext(), startTime, (int)id, repeatNo);
+            //CloseDialog
             getDialog().dismiss();
         }
     }
@@ -212,6 +234,8 @@ public class AddDailyReminder extends DialogFragment implements TimePickerDialog
         currentTimeEditText.setText(TIME_PREFIX + hourOfDay + ":" + stringMinute);
         String tempTime = hourOfDay + ":" + stringMinute;
         setSelectedTime(tempTime);
+        selectedHourOfDay = hourOfDay;
+        selectedMinute = minute;
         //Toast.makeText(getContext(), "Saat: " + hourOfDay + "Minute: " + minute + "Second: " + second, Toast.LENGTH_SHORT).show();
     }
 
@@ -225,12 +249,18 @@ public class AddDailyReminder extends DialogFragment implements TimePickerDialog
             String stringDay = addZero(dayOfMonth);
             String tempDate = stringDay+"/"+stringMonth+"/"+year; //İstediğimiz patternde olması için geçici bir startedDate oluşturuyoruz
             setSelectedStartedDate(tempDate); //Global değişkene set ediyoruz
+            mStartDayOfMonth = dayOfMonth;
+            mStartMonth = monthOfYear;
+            mStartYear = year;
         }else{
             endDateEditText.setText(date);
             String stringMonth = addZero(monthOfYear+1);
             String stringDay = addZero(dayOfMonth);
             String tempDate = stringDay+"/"+stringMonth+"/"+year; //İstediğimiz patternde olması için geçici bir startedDate oluşturuyoruz
             setSelectedEndedDate(tempDate); //Global değişkene set ediyoruz
+            mEndDayOfMonth = dayOfMonth;
+            mEndMonth = monthOfYear;
+            mEndYear = year;
         }
     }
 

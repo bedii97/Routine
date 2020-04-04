@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements AddDailyReminder.
 
         //Database Init
         //myDB = new DatabaseHelper(this);
-        getDataBaseData();
+        getDbData();
 
         floatingActionMenu = findViewById(R.id.famMenu);
         floatingActionButton1 = findViewById(R.id.menu_item1);
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements AddDailyReminder.
         });
     }
 
-    private void getDataBaseData() {
+    private void getDbData() {
         DatabaseHelper dbHelper = new DatabaseHelper(this);
         List<Reminder> reminderList = dbHelper.getReminder();
         reminderAdapter = new ReminderAdapter(this, reminderList);
@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity implements AddDailyReminder.
 
     @Override
     public void refreshRecyclerView() {
-        getDataBaseData();
+        getDbData();
         //reminderAdapter.notifyDataSetChanged();
     }
 
