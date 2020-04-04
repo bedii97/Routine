@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Routine</string>
+    <string name="app_name">RemindApp</string>
     <string name="action_settings">Ayarlar</string>
 
     <string name="menu_item_daily">Günlük</string>

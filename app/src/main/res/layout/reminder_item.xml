@@ -14,8 +14,8 @@
     android:clickable="true"
     android:focusable="true"
     android:foreground="?android:selectableItemBackground"
-    app:cardCornerRadius="4dp"
-    app:cardElevation="4dp">
+    app:cardCornerRadius="2dp"
+    app:cardElevation="1dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -48,28 +48,34 @@
             android:layout_marginTop="8dp"
             android:text="@string/reminder_item_starting_date"
             android:textSize="15sp"
-            android:textColor="?attr/primaryTextColor"/>
+            android:textColor="?attr/secondaryTextColor"/>
 
         <TextView
             android:id="@+id/reminder_item_end_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@string/reminder_item_end_date"/>
+            android:text="@string/reminder_item_end_date"
+            android:textSize="15sp"
+            android:textColor="?attr/secondaryTextColor"/>
 
         <TextView
             android:id="@+id/reminder_item_clock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@string/reminder_item_clock"/>
+            android:text="@string/reminder_item_clock"
+            android:textSize="15sp"
+            android:textColor="?attr/secondaryTextColor"/>
 
         <TextView
             android:id="@+id/reminder_item_frequency_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@string/reminder_item_frequency_value"/>
+            android:text="@string/reminder_item_frequency_value"
+            android:textSize="15sp"
+            android:textColor="?attr/secondaryTextColor"/>
 
     </LinearLayout>
 

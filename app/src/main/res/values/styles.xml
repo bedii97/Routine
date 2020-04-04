@@ -3,6 +3,10 @@
     <!-- Light Theme -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
+        <item name="colorPrimary">#FFA826</item>
+        <item name="colorPrimaryDark">@color/mainColorDarker</item>
+        <item name="colorAccent">@color/mainColor</item>
+
         <item name="appLabelColor">@color/appLabelColorLight</item>
 
         <!--Ground Colors (Light)-->
@@ -52,6 +56,10 @@
 
     <!-- Dark Theme -->
     <style name="AppThemeDark" parent="Theme.AppCompat.DayNight.NoActionBar">
+
+        <item name="colorPrimary">@color/toolbarColorDark</item>
+        <item name="colorPrimaryDark">@color/mainColor</item>
+        <item name="colorAccent">@color/mainColorDarker</item>
 
         <item name="appLabelColor">@color/appLabelColorDark</item>
 
