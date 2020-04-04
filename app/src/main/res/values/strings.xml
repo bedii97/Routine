@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Routine</string>
+    <string name="app_name">RemindApp</string>
     <string name="action_settings">Settings</string>
 
     <string name="menu_item_daily">Daily</string>

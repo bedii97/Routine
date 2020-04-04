@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#F55E95</color>
 
     <color name="mainColor">#F57D00</color>
     <color name="mainColorDarker">#E65200</color>
@@ -16,9 +19,9 @@
     <color name="appLabelColorLight">#FFFFFF</color>
 
     <!--Ground Colors (Light)-->
+    <color name="statusBarColorLight">@color/mainColorDarker</color>
     <color name="backgroundColorLight">#EEEEEE</color>
     <color name="toolbarColorLight">@color/mainColor</color>
-    <color name="statusBarColorLight">@color/mainColorDarker</color>
     <color name="cardViewColorLight">#FFFFFF</color>
 
     <color name="floatingActionButtonsShadowColor">#33000000</color>
@@ -64,13 +67,13 @@
 
     <!--DARK MODE COLORS-->
 
-    <color name="appLabelColorDark">#FFB84D</color>
+    <color name="appLabelColorDark">#66FFFFFF</color>
 
     <!--Ground Colors (Dark)-->
+    <color name="statusBarColorDark">#121212</color>
     <color name="backgroundColorDark">#121212</color>
-    <color name="toolbarColorDark">#1F1F1F</color>
-    <color name="statusBarColorDark">#000000</color>
-    <color name="cardViewColorDark">#1D1D1D</color>
+    <color name="toolbarColorDark">#1B1B1B</color>
+    <color name="cardViewColorDark">#191919</color>
 
     <!--editText Colors (Dark)-->
     <color name="editTextNormalColorDark">#66FFFFFF</color>
