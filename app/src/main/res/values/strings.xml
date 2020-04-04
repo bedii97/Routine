@@ -38,5 +38,13 @@
 
     <string name="time_prefix">Time: </string>
     <string name="date_prefix">Date: </string>
+    
+    <string name="weekly_reminder_day_buttons_monday">MON</string>
+    <string name="weekly_reminder_day_buttons_tuesday">TUE</string>
+    <string name="weekly_reminder_day_buttons_wednesday">WED</string>
+    <string name="weekly_reminder_day_buttons_thursday">THU</string>
+    <string name="weekly_reminder_day_buttons_friday">FRI</string>
+    <string name="weekly_reminder_day_buttons_saturday">SAT</string>
+    <string name="weekly_reminder_day_buttons_sunday">SUN</string>
 
 </resources>

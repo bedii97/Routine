@@ -40,4 +40,12 @@
     <string name="time_prefix">Saat: </string>
     <string name="date_prefix">Tarih: </string>
 
+    <string name="weekly_reminder_day_buttons_monday">PZT</string>
+    <string name="weekly_reminder_day_buttons_tuesday">SAL</string>
+    <string name="weekly_reminder_day_buttons_wednesday">ÇAR</string>
+    <string name="weekly_reminder_day_buttons_thursday">PER</string>
+    <string name="weekly_reminder_day_buttons_friday">CUM</string>
+    <string name="weekly_reminder_day_buttons_saturday">CMT</string>
+    <string name="weekly_reminder_day_buttons_sunday">PAZ</string>
+
 </resources>

@@ -12,6 +12,8 @@
     <color name="fabIconMainColor">#FFFFFF</color>
     <color name="fabIconSideColor">#66FFFFFF</color>
 
+    <color name="checkBoxButtonTint">#FF9900</color>
+
 
 
     <!--LIGHT MODE COLORS-->
@@ -110,6 +112,5 @@
     <color name="saveButtonColorPressedDark">#FFB84D</color>
 
     <color name="calendarAndClockColorDark">@color/mainColorDark</color>
-
 
 </resources>
