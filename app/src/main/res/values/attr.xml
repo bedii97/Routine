@@ -29,6 +29,9 @@
     <attr name="editTextNormalColor" format="reference"/>
     <attr name="editTextActivatedColor" format="reference"/>
 
+    <attr name="toolbarOptionButtonColor" format="reference"/>
+    <attr name="toolbarPopupTheme" format="reference"/>
+
     <attr name="reminderSaveButtonTextColor" format="reference"/>
     <attr name="reminderCancelButtonTextColor" format="reference"/>
 

@@ -1,7 +1,9 @@
 package com.example.routine;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import com.google.android.gms.oss.licenses.OssLicensesMenuActivity;
 import com.example.routine.Adapter.ReminderAdapter;
 import com.example.routine.DbHelper.DBConstants;
 import com.example.routine.DbHelper.DatabaseHelper;
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements AddDailyReminder.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -122,17 +125,32 @@ public class MainActivity extends AppCompatActivity implements AddDailyReminder.
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        //Open LibraryActivity
+        switch (item.getItemId()) {
+            case R.id.action_dark_mode:
+                if (item.isChecked()){
+                    item.setChecked(false);
+                }
+                else {
+                    item.setChecked(true);
+                }
+                break;
+            case R.id.action_libraries:
+                Intent intent = new Intent(this, OssLicensesMenuActivity.class);
+                String title = getString(R.string.action_libraries);
+                intent.putExtra("title", title);
+                this.startActivity(intent);
+                break;
+
+            default:return super.onOptionsItemSelected(item);
         }
+        return true;
+    }
 
-        return super.onOptionsItemSelected(item);
+    private void restartApp() {
+        startActivity(new Intent(this, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION));
+        finish();
     }
 
     @Override

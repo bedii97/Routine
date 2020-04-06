@@ -4,8 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:background="?attr/cardViewColor">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -99,7 +98,7 @@
                     android:layout_height="48dp"
                     android:buttonTint="@color/checkBoxButtonTint"
                     android:text="@string/weekly_reminder_day_buttons_monday"
-                    android:textColor="?attr/thirdTextColor"
+                    android:textColor="?attr/secondaryTextColor"
                     android:textStyle="bold"/>
 
                 <CheckBox
@@ -108,7 +107,7 @@
                     android:layout_marginStart="16dp"
                     android:buttonTint="@color/checkBoxButtonTint"
                     android:text="@string/weekly_reminder_day_buttons_tuesday"
-                    android:textColor="?attr/thirdTextColor"
+                    android:textColor="?attr/secondaryTextColor"
                     android:textStyle="bold"/>
 
                 <CheckBox
@@ -117,7 +116,7 @@
                     android:layout_marginStart="16dp"
                     android:buttonTint="@color/checkBoxButtonTint"
                     android:text="@string/weekly_reminder_day_buttons_wednesday"
-                    android:textColor="?attr/thirdTextColor"
+                    android:textColor="?attr/secondaryTextColor"
                     android:textStyle="bold"/>
 
             </TableRow>
@@ -132,7 +131,7 @@
                     android:layout_height="48dp"
                     android:buttonTint="@color/checkBoxButtonTint"
                     android:text="@string/weekly_reminder_day_buttons_thursday"
-                    android:textColor="?attr/thirdTextColor"
+                    android:textColor="?attr/secondaryTextColor"
                     android:textStyle="bold"/>
 
                 <CheckBox
@@ -141,7 +140,7 @@
                     android:layout_marginStart="16dp"
                     android:buttonTint="@color/checkBoxButtonTint"
                     android:text="@string/weekly_reminder_day_buttons_friday"
-                    android:textColor="?attr/thirdTextColor"
+                    android:textColor="?attr/secondaryTextColor"
                     android:textStyle="bold"/>
 
                 <CheckBox
@@ -150,7 +149,7 @@
                     android:layout_marginStart="16dp"
                     android:buttonTint="@color/checkBoxButtonTint"
                     android:text="@string/weekly_reminder_day_buttons_saturday"
-                    android:textColor="?attr/thirdTextColor"
+                    android:textColor="?attr/secondaryTextColor"
                     android:textStyle="bold"/>
 
             </TableRow>
@@ -165,7 +164,7 @@
                     android:layout_height="48dp"
                     android:buttonTint="@color/checkBoxButtonTint"
                     android:text="@string/weekly_reminder_day_buttons_sunday"
-                    android:textColor="?attr/thirdTextColor"
+                    android:textColor="?attr/secondaryTextColor"
                     android:textStyle="bold"/>
 
             </TableRow>

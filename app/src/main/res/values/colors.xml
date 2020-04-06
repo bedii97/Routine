@@ -19,6 +19,7 @@
     <!--LIGHT MODE COLORS-->
 
     <color name="appLabelColorLight">#FFFFFF</color>
+    <color name="toolbarOptionButtonColorLight">#FFFFFF</color>
 
     <!--Ground Colors (Light)-->
     <color name="statusBarColorLight">@color/mainColorDarker</color>
@@ -70,6 +71,7 @@
     <!--DARK MODE COLORS-->
 
     <color name="appLabelColorDark">#66FFFFFF</color>
+    <color name="toolbarOptionButtonColorDark">#66FFFFFF</color>
 
     <!--Ground Colors (Dark)-->
     <color name="statusBarColorDark">#121212</color>
@@ -104,7 +106,7 @@
 
     <!--Reminder Buttons Text Colors (Dark)-->
     <color name="reminderSaveButtonTextColorDark">#D9FFFFFF</color>
-    <color name="reminderCancelButtonTextColorDark">#66FFFFFF</color>
+    <color name="reminderCancelButtonTextColorDark">#99FFFFFF</color>
 
     <!--Reminder Buttons Colors (Dark)-->
     <color name="saveButtonColorNormalDark">#FF9900</color>

@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp"
+    app:contentPadding="16dp"
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
     android:layout_marginTop="8dp"
@@ -14,69 +14,75 @@
     android:clickable="true"
     android:focusable="true"
     android:foreground="?android:selectableItemBackground"
-    app:cardCornerRadius="2dp"
+    app:cardCornerRadius="4dp"
     app:cardElevation="1dp">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/reminder_item_event_name"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/reminder_item_event_name"
-            android:textSize="21sp"
-            android:textStyle="bold"
-            android:textColor="?attr/primaryTextColor"/>
+            android:textColor="?attr/primaryTextColor"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/reminder_item_starting_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/reminder_item_notification_message"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:text="@string/reminder_item_notification_message"
-            android:textSize="17sp"
-            android:textColor="?attr/primaryTextColor"/>
+            android:textColor="?attr/secondaryTextColor"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/reminder_item_event_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reminder_item_event_name" />
 
         <TextView
             android:id="@+id/reminder_item_starting_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:text="@string/reminder_item_starting_date"
-            android:textSize="15sp"
-            android:textColor="?attr/secondaryTextColor"/>
+            android:textColor="?attr/thirdTextColor"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/reminder_item_end_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:text="@string/reminder_item_end_date"
-            android:textSize="15sp"
-            android:textColor="?attr/secondaryTextColor"/>
+            android:textColor="?attr/thirdTextColor"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reminder_item_starting_date" />
 
         <TextView
             android:id="@+id/reminder_item_clock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:text="@string/reminder_item_clock"
-            android:textSize="15sp"
-            android:textColor="?attr/secondaryTextColor"/>
+            android:textColor="?attr/thirdTextColor"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reminder_item_end_date" />
 
         <TextView
             android:id="@+id/reminder_item_frequency_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:text="@string/reminder_item_frequency_value"
-            android:textSize="15sp"
-            android:textColor="?attr/secondaryTextColor"/>
+            android:textColor="?attr/thirdTextColor"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reminder_item_notification_message" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

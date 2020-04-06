@@ -2,9 +2,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.routine.MainActivity">
+
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_dark_mode"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:title="@string/action_dark_mode"
+        app:showAsAction="never"
+        android:checkable="true" />
+
+    <item
+        android:id="@+id/action_libraries"
+        android:orderInCategory="100"
+        android:title="@string/action_libraries"
+        app:showAsAction="never"/>
+
 </menu>
