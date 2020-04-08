@@ -49,6 +49,11 @@
     <string name="weekly_reminder_day_buttons_saturday">CMT</string>
     <string name="weekly_reminder_day_buttons_sunday">PAZ</string>
 
+    <string name="contextual_action_mode_edit">Düzenle</string>
+    <string name="contextual_action_mode_delete">Sil</string>
+
+    <string name="no_event_include_text">Etkin Alışkanlık Yok</string>
+
     <!--Content Description-->
     <string name="back_btn">Geri</string>
 

@@ -47,6 +47,11 @@
     <string name="weekly_reminder_day_buttons_friday">FRI</string>
     <string name="weekly_reminder_day_buttons_saturday">SAT</string>
     <string name="weekly_reminder_day_buttons_sunday">SUN</string>
+    
+    <string name="contextual_action_mode_edit">Edit</string>
+    <string name="contextual_action_mode_delete">Delete</string>
+
+    <string name="no_event_include_text">No Active Habits</string>
 
     <!--Content Description-->
     <string name="back_btn">Back</string>

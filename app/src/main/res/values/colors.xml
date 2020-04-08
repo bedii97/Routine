@@ -8,6 +8,8 @@
     <color name="mainColorDarker">#E65200</color>
     <color name="mainColorDark">#FF9900</color>
 
+    <color name="colorSplash">#F57D00</color>
+
     <!--FAB Icons Colors-->
     <color name="fabIconMainColor">#FFFFFF</color>
     <color name="fabIconSideColor">#66FFFFFF</color>
@@ -30,7 +32,7 @@
     <color name="floatingActionButtonsShadowColor">#33000000</color>
 
     <!--editText Colors (Light)-->
-    <color name="editTextNormalColorLight">#D9000000</color>
+    <color name="editTextNormalColorLight">#99000000</color>
     <color name="editTextActivatedColorLight">@color/mainColor</color>
 
     <!--Text Colors (Light)-->
@@ -80,7 +82,7 @@
     <color name="cardViewColorDark">#191919</color>
 
     <!--editText Colors (Dark)-->
-    <color name="editTextNormalColorDark">#66FFFFFF</color>
+    <color name="editTextNormalColorDark">#99FFFFFF</color>
     <color name="editTextActivatedColorDark">@color/mainColorDark</color>
 
     <!--Text Colors (Dark)-->
