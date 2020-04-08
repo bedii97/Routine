@@ -3,10 +3,8 @@
 
     <item android:drawable="@color/colorSplash"/>
 
-    <item>
-        <bitmap
-            android:gravity="center"
-            android:src="@drawable/third"/>
-    </item>
+    <item
+        android:drawable="@drawable/ic_pure_logo"
+        android:gravity="center"/>
 
 </layer-list>
